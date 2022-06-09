@@ -10,12 +10,19 @@ import UIKit
 // MARK: - Font
 
 enum Font {
+    /// 24pt Medium
     case display1
+    /// 20pt Bold
     case display2
+    /// 18pt Medium
     case display3
+    /// 14pt Medium
     case display4
+    /// 16pt Bold
     case buttonBig
+    /// 12pt Medium
     case buttonSmall
+    /// 16pt Medium
     case tabBarButton
     
     var type: UIFont? {

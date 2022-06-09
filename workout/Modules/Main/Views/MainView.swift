@@ -26,6 +26,12 @@ class MainView: UIView {
         enum Calendar {
             static let heightAnchor: CGFloat = 69
         }
+        
+        enum UserName {
+            static let leadingPadding: CGFloat = 6
+            static let bottomPadding: CGFloat = 7
+            static let heightAnchor: CGFloat = 28
+        }
     }
     
     private lazy var userPhotoImageView: UIImageView = {
@@ -34,6 +40,10 @@ class MainView: UIView {
     
     private lazy var calendarView: CalendarView = {
         return CalendarView()
+    }()
+    
+    private lazy var userNameLabel: UILabel = {
+        return MainView.makeUserNameLabel()
     }()
     
     // MARK: - Initilization
@@ -70,6 +80,9 @@ class MainView: UIView {
         
         addSubview(userPhotoImageView)
         activateUserPhotoImageViewConstraints()
+        
+        addSubview(userNameLabel)
+        activateUserNameLabelConstraints()
     }
     
     private func roundOff(_ view: UIView, with radius: CGFloat) {
@@ -86,6 +99,17 @@ class MainView: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
+    }
+    
+    static func makeUserNameLabel() -> UILabel {
+        let label = UILabel()
+        label.font = Font.display1.type
+        label.lineBreakMode = .byTruncatingTail
+        label.textColor = UIColor(color: .title1)
+        label.text = LocalizableStrings.blaBlaBlaTitle.localizedString
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
     }
     
     // MARK: - Layout
@@ -109,6 +133,18 @@ class MainView: UIView {
             userPhotoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             userPhotoImageView.heightAnchor.constraint(equalToConstant: LayoutConstants.UserPhoto.heightAnchor),
             userPhotoImageView.widthAnchor.constraint(equalToConstant: LayoutConstants.UserPhoto.heightAnchor)
+        ])
+    }
+    
+    private func activateUserNameLabelConstraints() {
+        NSLayoutConstraint.activate([
+            userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor,
+                                                   constant: LayoutConstants.UserName.leadingPadding),
+            userNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
+                                                    constant: -LayoutConstants.padding),
+            userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor,
+                                                  constant: -LayoutConstants.UserName.bottomPadding),
+            userNameLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.UserName.heightAnchor)
         ])
     }
 }
