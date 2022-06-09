@@ -10,7 +10,7 @@ import UIKit
 class MainViewModuleBuilder: ModuleBuilder {
     static func createModule() -> UIViewController {
         let viewController = MainViewController()
-        let presenter = MainViewPresenter(view: viewController)
+        let presenter = MainPresenter(view: viewController)
         viewController.presenter = presenter
         
         return viewController

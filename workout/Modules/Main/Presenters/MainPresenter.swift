@@ -1,5 +1,5 @@
 //
-//  MainViewPresenter.swift
+//  MainPresenter.swift
 //  workout
 //
 //  Created by Mikhail Chaus on 06.06.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainViewPresenter {
+class MainPresenter {
     // MARK: - Public Properties
     
     weak var view: MainViewProtocol?
@@ -21,5 +21,5 @@ class MainViewPresenter {
 
 // MARK: - MainPresenterProtocol
 
-extension MainViewPresenter: MainPresenterProtocol {
+extension MainPresenter: MainPresenterProtocol {
 }
