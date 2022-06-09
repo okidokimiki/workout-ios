@@ -85,9 +85,9 @@
 		0411739A284E55580058BE9C /* App */ = {
 			isa = PBXGroup;
 			children = (
-				ED801E272851ECB300B22786 /* WorkoutTabBar */,
 				04117386284E55370058BE9C /* AppDelegate.swift */,
 				04117388284E55370058BE9C /* SceneDelegate.swift */,
+				ED801E272851ECB300B22786 /* WorkoutTabBar */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -168,8 +168,8 @@
 		ED801E272851ECB300B22786 /* WorkoutTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				ED801E282851ECD100B22786 /* WorkoutTabs.swift */,
 				ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */,
+				ED801E282851ECD100B22786 /* WorkoutTabs.swift */,
 			);
 			path = WorkoutTabBar;
 			sourceTree = "<group>";
