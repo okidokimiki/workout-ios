@@ -37,6 +37,11 @@ class MainView: UIView {
             static let heightAnchor: CGFloat = 80
             static let topPadding: CGFloat = 6
         }
+        
+        enum Weather {
+            static let leadingPadding: CGFloat = 10
+            static let topPadding: CGFloat = 6
+        }
     }
     
     private lazy var userPhotoImageView: UIImageView = {
@@ -53,6 +58,10 @@ class MainView: UIView {
     
     private lazy var plusButton: PlusButton = {
         return PlusButton(type: .system)
+    }()
+    
+    private lazy var weatherView: WeatherView = {
+        return WeatherView()
     }()
     
     // MARK: - Initilization
@@ -76,6 +85,7 @@ class MainView: UIView {
         roundOff(userPhotoImageView, with: LayoutConstants.UserPhoto.heightAnchor / 2)
         roundOff(calendarView, with: LayoutConstants.cornerRadius)
         roundOff(plusButton, with: LayoutConstants.cornerRadius)
+        roundOff(weatherView, with: LayoutConstants.cornerRadius)
     }
     
     // MARK: - Private Methods
@@ -96,6 +106,9 @@ class MainView: UIView {
         
         addSubview(plusButton)
         activatePlusButtonConstraints()
+        
+        addSubview(weatherView)
+        activateWeatherViewConstraints()
     }
     
     private func roundOff(_ view: UIView, with radius: CGFloat) {
@@ -169,6 +182,17 @@ class MainView: UIView {
                                             constant: LayoutConstants.Plus.topPadding),
             plusButton.heightAnchor.constraint(equalToConstant: LayoutConstants.Plus.heightAnchor),
             plusButton.widthAnchor.constraint(equalToConstant: LayoutConstants.Plus.heightAnchor)
+        ])
+    }
+    
+    private func activateWeatherViewConstraints() {
+        NSLayoutConstraint.activate([
+            weatherView.leadingAnchor.constraint(equalTo: plusButton.trailingAnchor,
+                                                constant: LayoutConstants.padding),
+            weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor,
+                                             constant: LayoutConstants.Weather.topPadding),
+            weatherView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
+                                                  constant: -LayoutConstants.padding)
         ])
     }
 }

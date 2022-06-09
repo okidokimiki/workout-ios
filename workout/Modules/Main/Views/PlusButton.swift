@@ -37,6 +37,7 @@ class PlusButton: UIButton {
     // MARK: - Private Methods
     
     private func configureButton() {
+        makeShadowUnderView()
         tintColor = UIColor(color: .accent4)
         setImage(UIImage(image: .plus), for: .normal)
         imageEdgeInsets = UIEdgeInsets(top: 0,

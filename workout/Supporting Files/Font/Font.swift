@@ -18,6 +18,8 @@ enum Font {
     case display3
     /// 14pt Medium
     case display4
+    /// 13pt Medium
+    case display5
     /// 16pt Bold
     case buttonBig
     /// 12pt Medium
@@ -35,6 +37,8 @@ enum Font {
             return UIFont.makeFontWith(title: .roboto, type: .medium, size: .pt18)
         case .display4:
             return UIFont.makeFontWith(title: .roboto, type: .medium, size: .pt14)
+        case .display5:
+            return UIFont.makeFontWith(title: .roboto, type: .medium, size: .pt13)
         case .buttonBig:
             return UIFont.makeFontWith(title: .roboto, type: .bold, size: .pt16)
         case .buttonSmall:
@@ -83,6 +87,7 @@ enum FontSize: CGFloat {
     case pt18
     case pt14
     case pt16
+    case pt13
     case pt12
     
     var value: CGFloat {
@@ -97,6 +102,8 @@ enum FontSize: CGFloat {
             return 14
         case .pt16:
             return 16
+        case .pt13:
+            return 13
         case .pt12:
             return 12
         }

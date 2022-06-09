@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAA28526B8100E1B6B7 /* CalendarView.swift */; };
 		040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAE285274A800E1B6B7 /* PlusButton.swift */; };
+		040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB0285289EB00E1B6B7 /* WeatherView.swift */; };
+		040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */; };
 		04117387284E55370058BE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117386284E55370058BE9C /* AppDelegate.swift */; };
 		04117389284E55370058BE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117388284E55370058BE9C /* SceneDelegate.swift */; };
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		040FDFAA28526B8100E1B6B7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		040FDFAE285274A800E1B6B7 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		040FDFB0285289EB00E1B6B7 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		04117383284E55370058BE9C /* workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04117386284E55370058BE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04117388284E55370058BE9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,14 @@
 				040FDFAA28526B8100E1B6B7 /* CalendarView.swift */,
 			);
 			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		040FDFB2285289EE00E1B6B7 /* WeatherView */ = {
+			isa = PBXGroup;
+			children = (
+				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
+			);
+			path = WeatherView;
 			sourceTree = "<group>";
 		};
 		0411737A284E55370058BE9C = {
@@ -205,6 +217,7 @@
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
 				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
 				040FDFAC28526B8400E1B6B7 /* CalendarView */,
+				040FDFB2285289EE00E1B6B7 /* WeatherView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +228,7 @@
 				04FE09FA284E5DD100839CBF /* UIColor + Extension.swift */,
 				04F6B65F2852134B00C7A4F9 /* UIImage + Extension.swift */,
 				04F6B67D2852342700C7A4F9 /* UIFont + Extension.swift */,
+				040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -382,10 +396,12 @@
 				04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */,
 				ED970E622851F451004A4E06 /* WorkoutTabBarController.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
+				040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */,
 				04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */,
 				04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */,
 				04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
+				040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */,
 				040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */,
 				ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
