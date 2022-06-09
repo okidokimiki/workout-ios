@@ -17,11 +17,11 @@ enum WorkoutTabs: CaseIterable {
     var title: String {
         switch self {
         case .main:
-            return "Main"
+            return LocalizableStrings.tabBarMainSectionTitle.localizedString
         case .statistics:
-            return "Statistics"
+            return LocalizableStrings.tabBarStatisticsSectionTitle.localizedString
         case .profile:
-            return "Profile"
+            return LocalizableStrings.tabBarProfileSectionTitle.localizedString
         }
     }
     
