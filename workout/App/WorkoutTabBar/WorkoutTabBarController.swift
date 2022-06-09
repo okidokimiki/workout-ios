@@ -29,7 +29,7 @@ class WorkoutTabBarController: UITabBarController {
     
     private func configureTabBarViewController() {
         tabBar.layer.borderWidth = LayoutConstants.tabBarBorderWidth
-        tabBar.layer.borderColor = UIColor(color: .profileBorder)?.cgColor
+        tabBar.layer.borderColor = UIColor(color: .tabBorder)?.cgColor
         tabBar.backgroundColor = UIColor(color: .tabBackground)
         tabBar.tintColor = UIColor(color: .title1)
         

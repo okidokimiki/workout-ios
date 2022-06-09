@@ -38,20 +38,6 @@ enum WorkoutTabs: CaseIterable {
         }
     }
     
-    // MARK: - selectedImage
-    // FIXME: Look at «Manna» project
-    
-    var selectedImage: UIImage? {
-        switch self {
-        case .main:
-            return UIImage(image: .main)
-        case .statistics:
-            return UIImage(image: .statistic)
-        case .profile:
-            return UIImage(image: .profile)
-        }
-    }
-    
     // MARK: - viewController
     
     var viewController: UIViewController {
