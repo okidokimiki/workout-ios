@@ -107,14 +107,6 @@
 			path = CalendarView;
 			sourceTree = "<group>";
 		};
-		040FDFB2285289EE00E1B6B7 /* WeatherView */ = {
-			isa = PBXGroup;
-			children = (
-				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
-			);
-			path = WeatherView;
-			sourceTree = "<group>";
-		};
 		0411737A284E55370058BE9C = {
 			isa = PBXGroup;
 			children = (
@@ -216,8 +208,8 @@
 				0411738A284E55370058BE9C /* MainViewController.swift */,
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
 				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
+				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
 				040FDFAC28526B8400E1B6B7 /* CalendarView */,
-				040FDFB2285289EE00E1B6B7 /* WeatherView */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -108,7 +108,7 @@ class WeatherView: UIView {
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
                                                constant: LayoutConstants.Subtitle.topPadding),
             subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                               constant: -LayoutConstants.Subtitle.trailingPadding),
+                                                    constant: -LayoutConstants.Subtitle.trailingPadding),
             subtitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
                                                   constant: -LayoutConstants.Subtitle.bottomPadding)
         ])
