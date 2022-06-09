@@ -20,6 +20,7 @@ extension UIColor {
         case accent1
         case accent2
         case accent3
+        case accent4
         case background
         case profileBackground
         case profileBorder

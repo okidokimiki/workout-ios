@@ -32,6 +32,11 @@ class MainView: UIView {
             static let bottomPadding: CGFloat = 7
             static let heightAnchor: CGFloat = 28
         }
+        
+        enum Plus {
+            static let heightAnchor: CGFloat = 80
+            static let topPadding: CGFloat = 6
+        }
     }
     
     private lazy var userPhotoImageView: UIImageView = {
@@ -44,6 +49,10 @@ class MainView: UIView {
     
     private lazy var userNameLabel: UILabel = {
         return MainView.makeUserNameLabel()
+    }()
+    
+    private lazy var plusButton: PlusButton = {
+        return PlusButton(type: .system)
     }()
     
     // MARK: - Initilization
@@ -66,6 +75,7 @@ class MainView: UIView {
         
         roundOff(userPhotoImageView, with: LayoutConstants.UserPhoto.heightAnchor / 2)
         roundOff(calendarView, with: LayoutConstants.cornerRadius)
+        roundOff(plusButton, with: LayoutConstants.cornerRadius)
     }
     
     // MARK: - Private Methods
@@ -83,6 +93,9 @@ class MainView: UIView {
         
         addSubview(userNameLabel)
         activateUserNameLabelConstraints()
+        
+        addSubview(plusButton)
+        activatePlusButtonConstraints()
     }
     
     private func roundOff(_ view: UIView, with radius: CGFloat) {
@@ -145,6 +158,17 @@ class MainView: UIView {
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor,
                                                   constant: -LayoutConstants.UserName.bottomPadding),
             userNameLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.UserName.heightAnchor)
+        ])
+    }
+    
+    private func activatePlusButtonConstraints() {
+        NSLayoutConstraint.activate([
+            plusButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
+                                                constant: LayoutConstants.padding),
+            plusButton.topAnchor.constraint(equalTo: calendarView.bottomAnchor,
+                                            constant: LayoutConstants.Plus.topPadding),
+            plusButton.heightAnchor.constraint(equalToConstant: LayoutConstants.Plus.heightAnchor),
+            plusButton.widthAnchor.constraint(equalToConstant: LayoutConstants.Plus.heightAnchor)
         ])
     }
 }

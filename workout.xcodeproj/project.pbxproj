@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAA28526B8100E1B6B7 /* CalendarView.swift */; };
+		040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAE285274A800E1B6B7 /* PlusButton.swift */; };
 		04117387284E55370058BE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117386284E55370058BE9C /* AppDelegate.swift */; };
 		04117389284E55370058BE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117388284E55370058BE9C /* SceneDelegate.swift */; };
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		040FDFAA28526B8100E1B6B7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		040FDFAE285274A800E1B6B7 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		04117383284E55370058BE9C /* workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04117386284E55370058BE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04117388284E55370058BE9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				0411738A284E55370058BE9C /* MainViewController.swift */,
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
+				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
 				040FDFAC28526B8400E1B6B7 /* CalendarView */,
 			);
 			path = Views;
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F6B67B2852166500C7A4F9 /* Font.swift in Sources */,
+				040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */,
 				04F6B67E2852342700C7A4F9 /* UIFont + Extension.swift in Sources */,
 				0411738B284E55370058BE9C /* MainViewController.swift in Sources */,
 				04FE09FB284E5DD100839CBF /* UIColor + Extension.swift in Sources */,
