@@ -25,6 +25,17 @@ enum WorkoutTabs: CaseIterable {
         }
     }
     
+    var image: UIImage? {
+        switch self {
+        case .main:
+            return UIImage(image: .main)
+        case .statistics:
+            return UIImage(image: .statistic)
+        case .profile:
+            return UIImage(image: .profile)
+        }
+    }
+    
     // MARK: - viewController
     
     var viewController: UIViewController {
@@ -43,7 +54,7 @@ enum WorkoutTabs: CaseIterable {
             viewController.view.backgroundColor = UIColor(color: .accent1)
             view = UINavigationController(rootViewController: viewController)
         }
-        view.tabBarItem = UITabBarItem(title: title, image: nil, selectedImage: nil)
+        view.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)
         
         return view
     }
