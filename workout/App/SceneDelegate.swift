@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = MainViewModuleBuilder.createModule()
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = viewController
+        window?.rootViewController = WorkoutTabBarController()
         window?.makeKeyAndVisible()
     }
 }

@@ -20,6 +20,8 @@
 		04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A09284E81AC00839CBF /* MainViewInput.swift */; };
 		04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0B284E81F700839CBF /* MainViewOutput.swift */; };
 		04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */; };
+		ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* WorkoutTabs.swift */; };
+		ED970E622851F451004A4E06 /* WorkoutTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		04FE0A09284E81AC00839CBF /* MainViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
 		04FE0A0B284E81F700839CBF /* MainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
 		04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUiDelegate.swift; sourceTree = "<group>"; };
+		ED801E282851ECD100B22786 /* WorkoutTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabs.swift; sourceTree = "<group>"; };
+		ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		0411739A284E55580058BE9C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				ED801E272851ECB300B22786 /* WorkoutTabBar */,
 				04117386284E55370058BE9C /* AppDelegate.swift */,
 				04117388284E55370058BE9C /* SceneDelegate.swift */,
 			);
@@ -158,6 +163,15 @@
 				04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		ED801E272851ECB300B22786 /* WorkoutTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ED801E282851ECD100B22786 /* WorkoutTabs.swift */,
+				ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */,
+			);
+			path = WorkoutTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +272,11 @@
 				04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */,
 				04117387284E55370058BE9C /* AppDelegate.swift in Sources */,
 				04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */,
+				ED970E622851F451004A4E06 /* WorkoutTabBarController.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
 				04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
+				ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
 				04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */,
 			);
