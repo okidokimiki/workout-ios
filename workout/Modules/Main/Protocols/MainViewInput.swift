@@ -7,5 +7,5 @@
 
 import Foundation
 
-protocol MainViewProtocol: AnyObject {
+protocol MainViewInput: AnyObject {
 }

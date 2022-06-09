@@ -17,8 +17,8 @@
 		04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A00284E80BE00839CBF /* MainViewModuleBuilder.swift */; };
 		04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */; };
 		04FE0A07284E817000839CBF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A06284E817000839CBF /* MainPresenter.swift */; };
-		04FE0A0A284E81AC00839CBF /* MainViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A09284E81AC00839CBF /* MainViewProtocol.swift */; };
-		04FE0A0C284E81F700839CBF /* MainPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0B284E81F700839CBF /* MainPresenterProtocol.swift */; };
+		04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A09284E81AC00839CBF /* MainViewInput.swift */; };
+		04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0B284E81F700839CBF /* MainViewOutput.swift */; };
 		04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +35,8 @@
 		04FE0A00284E80BE00839CBF /* MainViewModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModuleBuilder.swift; sourceTree = "<group>"; };
 		04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		04FE0A06284E817000839CBF /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		04FE0A09284E81AC00839CBF /* MainViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewProtocol.swift; sourceTree = "<group>"; };
-		04FE0A0B284E81F700839CBF /* MainPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterProtocol.swift; sourceTree = "<group>"; };
+		04FE0A09284E81AC00839CBF /* MainViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
+		04FE0A0B284E81F700839CBF /* MainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
 		04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUiDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,8 +153,8 @@
 		04FE0A08284E81A500839CBF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				04FE0A0B284E81F700839CBF /* MainPresenterProtocol.swift */,
-				04FE0A09284E81AC00839CBF /* MainViewProtocol.swift */,
+				04FE0A0B284E81F700839CBF /* MainViewOutput.swift */,
+				04FE0A09284E81AC00839CBF /* MainViewInput.swift */,
 				04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */,
 			);
 			path = Protocols;
@@ -255,9 +255,9 @@
 				0411738B284E55370058BE9C /* MainViewController.swift in Sources */,
 				04FE09FB284E5DD100839CBF /* UIColor + Extension.swift in Sources */,
 				04FE0A07284E817000839CBF /* MainPresenter.swift in Sources */,
-				04FE0A0A284E81AC00839CBF /* MainViewProtocol.swift in Sources */,
+				04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */,
 				04117387284E55370058BE9C /* AppDelegate.swift in Sources */,
-				04FE0A0C284E81F700839CBF /* MainPresenterProtocol.swift in Sources */,
+				04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
 				04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,

@@ -10,16 +10,16 @@ import Foundation
 class MainPresenter {
     // MARK: - Public Properties
     
-    weak var view: MainViewProtocol?
+    weak var view: MainViewInput?
     
     // MARK: - Initilization
     
-    required init(view: MainViewProtocol) {
+    required init(view: MainViewInput) {
         self.view = view
     }
 }
 
-// MARK: - MainPresenterProtocol
+// MARK: - MainViewOutput
 
-extension MainPresenter: MainPresenterProtocol {
+extension MainPresenter: MainViewOutput {
 }
