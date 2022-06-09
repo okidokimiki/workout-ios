@@ -13,9 +13,8 @@ class WorkoutTabBarController: UITabBarController {
     private enum LayoutConstants {
         static let tabBarBorderWidth: CGFloat = 1
     }
-        
+    
     private let appearance = UITabBarItem.appearance()
-    private let fontAttributes = [NSAttributedString.Key.font: Font.buttonBig.type!]
     
     // MARK: - UITabBarController Lifecycle
     
@@ -29,11 +28,15 @@ class WorkoutTabBarController: UITabBarController {
     // MARK: - Private Methods
     
     private func configureTabBarViewController() {
-        appearance.setTitleTextAttributes(fontAttributes, for: .normal)
         tabBar.layer.borderWidth = LayoutConstants.tabBarBorderWidth
         tabBar.layer.borderColor = UIColor(color: .profileBorder)?.cgColor
         tabBar.backgroundColor = UIColor(color: .tabBackground)
         tabBar.tintColor = UIColor(color: .title1)
+        
+        if let tabBarFont = Font.buttonBig.type {
+            let fontAttributes = [NSAttributedString.Key.font: tabBarFont]
+            appearance.setTitleTextAttributes(fontAttributes, for: .normal)
+        }
     }
     
     private func addControllers() {
