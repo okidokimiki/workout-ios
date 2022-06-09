@@ -25,6 +25,8 @@ enum WorkoutTabs: CaseIterable {
         }
     }
     
+    // MARK: - image
+    
     var image: UIImage? {
         switch self {
         case .main:
