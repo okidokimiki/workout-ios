@@ -11,7 +11,7 @@ class WorkoutTabBarController: UITabBarController {
     // MARK: - Private Properties
     
     private enum LayoutConstants {
-        static let tabBarBorderWidth: CGFloat = 1
+        static let tabBorderWidth: CGFloat = 1
     }
     
     private let appearance = UITabBarItem.appearance()
@@ -28,7 +28,7 @@ class WorkoutTabBarController: UITabBarController {
     // MARK: - Private Methods
     
     private func configureTabBarViewController() {
-        tabBar.layer.borderWidth = LayoutConstants.tabBarBorderWidth
+        tabBar.layer.borderWidth = LayoutConstants.tabBorderWidth
         tabBar.layer.borderColor = UIColor(color: .tabBorder)?.cgColor
         tabBar.backgroundColor = UIColor(color: .tabBackground)
         tabBar.tintColor = UIColor(color: .title1)
