@@ -13,9 +13,9 @@ class WorkoutTabBarController: UITabBarController {
     private enum LayoutConstants {
         static let tabBarBorderWidth: CGFloat = 1
     }
-    
+        
     private let appearance = UITabBarItem.appearance()
-    private let fontAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16.0)]
+    private let fontAttributes = [NSAttributedString.Key.font: Font.buttonBig.type!]
     
     // MARK: - UITabBarController Lifecycle
     
