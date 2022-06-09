@@ -12,4 +12,7 @@
 
 "plusButton.title" = "Добавить";
 
+"weatherLabel.title" = "Солнечно";
+"weatherLabel.subtitle" = "Хорошая погода, чтобы позаниматься на улице";
+
 "blaBlaBla.title" = "Раз Два Три Четыре Пять Шесть Семь Восемь Девять Десять";

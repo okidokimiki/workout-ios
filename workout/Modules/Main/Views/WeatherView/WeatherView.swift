@@ -66,11 +66,11 @@ class WeatherView: UIView {
     
     static func makeTitleLabel() -> UILabel {
         let label = UILabel()
-        label.text = "Солнечно"
-        label.numberOfLines = 2
+        label.numberOfLines = 1
         label.font = Font.display3.type
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor(color: .title1)
+        label.text = LocalizableStrings.weatherLabelTitle.localizedString
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -78,11 +78,11 @@ class WeatherView: UIView {
     
     static func makeSubtitleLabel() -> UILabel {
         let label = UILabel()
-        label.text = "Хорошая погода, чтобы позаниматься на улице"
         label.numberOfLines = 2
         label.font = Font.display5.type
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor(color: .weatherSubtitle)
+        label.text = LocalizableStrings.weatherLabelSubtitle.localizedString
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
