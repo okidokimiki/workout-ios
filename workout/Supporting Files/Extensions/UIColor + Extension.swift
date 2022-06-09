@@ -26,6 +26,8 @@ extension UIColor {
         case subtitle
         case tabBackground
         case tabBorder
+        case selectetedTabTint
+        case unselectedTabTint
         case title1
         case title2
         case title3

@@ -16,6 +16,7 @@ enum Font {
     case display4
     case buttonBig
     case buttonSmall
+    case tabBarButton
     
     var type: UIFont? {
         switch self {
@@ -31,6 +32,8 @@ enum Font {
             return UIFont.makeFontWith(title: .roboto, type: .bold, size: .pt16)
         case .buttonSmall:
             return UIFont.makeFontWith(title: .roboto, type: .medium, size: .pt12)
+        case .tabBarButton:
+            return UIFont.makeFontWith(title: .roboto, type: .medium, size: .pt16)
         }
     }
 }
