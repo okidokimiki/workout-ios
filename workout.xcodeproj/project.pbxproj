@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAA28526B8100E1B6B7 /* CalendarView.swift */; };
 		04117387284E55370058BE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117386284E55370058BE9C /* AppDelegate.swift */; };
 		04117389284E55370058BE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117388284E55370058BE9C /* SceneDelegate.swift */; };
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040FDFAA28526B8100E1B6B7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		04117383284E55370058BE9C /* workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04117386284E55370058BE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04117388284E55370058BE9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040FDFAC28526B8400E1B6B7 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				040FDFAA28526B8100E1B6B7 /* CalendarView.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		0411737A284E55370058BE9C = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 			children = (
 				0411738A284E55370058BE9C /* MainViewController.swift */,
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
+				040FDFAC28526B8400E1B6B7 /* CalendarView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +382,7 @@
 				04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */,
 				04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
+				040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */,
 				ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
 				04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */,
