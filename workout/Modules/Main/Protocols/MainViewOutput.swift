@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol MainPresenterProtocol {
-    init(view: MainViewProtocol)
+protocol MainViewOutput {
+    init(view: MainViewInput)
 }

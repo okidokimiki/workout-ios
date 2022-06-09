@@ -25,6 +25,7 @@ extension UIColor {
         case profileBorder
         case subtitle
         case tabBackground
+        case tabBorder
         case title1
         case title2
         case title3

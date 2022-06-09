@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     // MARK: - Public Properties
     
-    var presenter: MainPresenterProtocol?
+    var presenter: MainViewOutput?
     
     // MARK: - UIViewController Lifecycle
     
@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
 extension MainViewController: MainViewUiDelegate {
 }
 
-// MARK: - MainViewProtocol
+// MARK: - MainViewInput
 
-extension MainViewController: MainViewProtocol {
+extension MainViewController: MainViewInput {
 }
