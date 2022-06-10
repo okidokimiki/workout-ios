@@ -45,7 +45,7 @@ enum WorkoutTabs: CaseIterable {
         
         switch self {
         case .main:
-            let viewController = MainViewModuleBuilder.createModule()
+            let viewController = NewWorkoutViewController()
             view = UINavigationController(rootViewController: viewController)
         case .statistics:
             let viewController = UIViewController()
