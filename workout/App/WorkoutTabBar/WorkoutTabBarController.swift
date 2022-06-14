@@ -28,11 +28,11 @@ class WorkoutTabBarController: UITabBarController {
     // MARK: - Private Methods
     
     private func configureTabBarViewController() {
-        tabBar.unselectedItemTintColor = UIColor(color: .unselectedTabTint)
+        tabBar.unselectedItemTintColor = UIColor(color: .inactiveTabBar)
         tabBar.layer.borderWidth = LayoutConstants.tabBorderWidth
-        tabBar.layer.borderColor = UIColor(color: .tabBorder)?.cgColor
-        tabBar.backgroundColor = UIColor(color: .tabBackground)
-        tabBar.tintColor = UIColor(color: .selectetedTabTint)
+        tabBar.layer.borderColor = UIColor(color: .borderTabBar)?.cgColor
+        tabBar.backgroundColor = UIColor(color: .backgroundTabBar)
+        tabBar.tintColor = UIColor(color: .activeTabBar)
         
         if let tabBarFont = Font.tabBarButton.type {
             let fontAttributes = [NSAttributedString.Key.font: tabBarFont]
