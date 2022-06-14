@@ -52,8 +52,7 @@ enum Tabs: CaseIterable {
             viewController.view.backgroundColor = UIColor(color: .accent2)
             view = UINavigationController(rootViewController: viewController)
         case .profile:
-            let viewController = UIViewController()
-            viewController.view.backgroundColor = UIColor(color: .accent1)
+            let viewController = ProfileViewModuleBuilder.createModule()
             view = UINavigationController(rootViewController: viewController)
         }
         view.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)
