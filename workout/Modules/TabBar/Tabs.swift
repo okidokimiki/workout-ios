@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum WorkoutTabs: CaseIterable {
+enum Tabs: CaseIterable {
     case main
     case statistics
     case profile

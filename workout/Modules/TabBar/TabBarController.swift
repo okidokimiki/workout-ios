@@ -1,5 +1,5 @@
 //
-//  WorkoutTabBarController.swift
+//  TabBarController.swift
 //  workout
 //
 //  Created by Павел Дубинин on 09.06.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WorkoutTabBarController: UITabBarController {
+class TabBarController: UITabBarController {
     // MARK: - Private Properties
     
     private enum LayoutConstants {
@@ -42,7 +42,7 @@ class WorkoutTabBarController: UITabBarController {
     
     private func addControllers() {
         var controllers: [UIViewController] = []
-        WorkoutTabs.allCases.forEach {
+        Tabs.allCases.forEach {
             controllers.append($0.viewController)
         }
         

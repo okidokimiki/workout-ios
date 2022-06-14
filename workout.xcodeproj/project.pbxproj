@@ -41,8 +41,8 @@
 		04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A09284E81AC00839CBF /* MainViewInput.swift */; };
 		04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0B284E81F700839CBF /* MainViewOutput.swift */; };
 		04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */; };
-		ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* WorkoutTabs.swift */; };
-		ED970E622851F451004A4E06 /* WorkoutTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */; };
+		ED801E292851ECD100B22786 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* Tabs.swift */; };
+		ED970E622851F451004A4E06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,8 +84,8 @@
 		04FE0A09284E81AC00839CBF /* MainViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
 		04FE0A0B284E81F700839CBF /* MainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
 		04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUiDelegate.swift; sourceTree = "<group>"; };
-		ED801E282851ECD100B22786 /* WorkoutTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabs.swift; sourceTree = "<group>"; };
-		ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabBarController.swift; sourceTree = "<group>"; };
+		ED801E282851ECD100B22786 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		ED970E612851F451004A4E06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +139,6 @@
 			children = (
 				04117386284E55370058BE9C /* AppDelegate.swift */,
 				04117388284E55370058BE9C /* SceneDelegate.swift */,
-				ED801E272851ECB300B22786 /* WorkoutTabBar */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -197,6 +196,7 @@
 		04FE09F7284E5C0800839CBF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED801E272851ECB300B22786 /* TabBar */,
 				04FE09FC284E7F7500839CBF /* Main */,
 			);
 			path = Modules;
@@ -262,13 +262,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		ED801E272851ECB300B22786 /* WorkoutTabBar */ = {
+		ED801E272851ECB300B22786 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */,
-				ED801E282851ECD100B22786 /* WorkoutTabs.swift */,
+				ED970E612851F451004A4E06 /* TabBarController.swift */,
+				ED801E282851ECD100B22786 /* Tabs.swift */,
 			);
-			path = WorkoutTabBar;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,7 +386,7 @@
 				04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */,
 				04117387284E55370058BE9C /* AppDelegate.swift in Sources */,
 				04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */,
-				ED970E622851F451004A4E06 /* WorkoutTabBarController.swift in Sources */,
+				ED970E622851F451004A4E06 /* TabBarController.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
 				040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */,
 				04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */,
@@ -395,7 +395,7 @@
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
 				040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */,
 				040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */,
-				ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */,
+				ED801E292851ECD100B22786 /* Tabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
 				04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */,
 			);
