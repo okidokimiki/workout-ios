@@ -99,10 +99,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04060FD728593B3D00DF93F6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04F6B65C2852018000C7A4F9 /* Localizable */,
+				04F6B661285214AB00C7A4F9 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		040FDFAC28526B8400E1B6B7 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
 				040FDFAA28526B8100E1B6B7 /* CalendarView.swift */,
+				040FDFB52852980E00E1B6B7 /* CalendarCollectionView.swift */,
+				040FDFB72852983800E1B6B7 /* CalendarCollectionViewCell.swift */,
 			);
 			path = CalendarView;
 			sourceTree = "<group>";
@@ -147,8 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				04FE09F9284E5DC500839CBF /* Extensions */,
-				04F6B65C2852018000C7A4F9 /* Localizable */,
-				04F6B661285214AB00C7A4F9 /* Font */,
+				04060FD728593B3D00DF93F6 /* Resources */,
 				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
 				04117391284E55380058BE9C /* LaunchScreen.storyboard */,
 				04117394284E55380058BE9C /* Info.plist */,
