@@ -25,10 +25,10 @@ extension UIColor {
         case profileBackground
         case profileBorder
         case subtitle
-        case tabBackground
-        case tabBorder
-        case selectetedTabTint
-        case unselectedTabTint
+        case backgroundTabBar
+        case borderTabBar
+        case activeTabBar
+        case inactiveTabBar
         case title1
         case title2
         case title3
