@@ -21,23 +21,25 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureTabBarViewController()
+        configureTabBarController()
         addControllers()
     }
     
     // MARK: - Private Methods
     
-    private func configureTabBarViewController() {
+    private func configureTabBarController() {
         tabBar.unselectedItemTintColor = UIColor(color: .inactiveTabBar)
         tabBar.layer.borderWidth = LayoutConstants.tabBorderWidth
         tabBar.layer.borderColor = UIColor(color: .borderTabBar)?.cgColor
         tabBar.backgroundColor = UIColor(color: .backgroundTabBar)
         tabBar.tintColor = UIColor(color: .activeTabBar)
-        
-        if let tabBarFont = Font.tabBarButton.type {
-            let fontAttributes = [NSAttributedString.Key.font: tabBarFont]
-            appearance.setTitleTextAttributes(fontAttributes, for: .normal)
-        }
+        configureAppearanceTabBarController()
+    }
+    
+    private func configureAppearanceTabBarController() {
+        guard let tabBarFont = Font.tabBarButton.type else { return }
+        let fontAttributes = [NSAttributedString.Key.font: tabBarFont]
+        appearance.setTitleTextAttributes(fontAttributes, for: .normal)
     }
     
     private func addControllers() {
