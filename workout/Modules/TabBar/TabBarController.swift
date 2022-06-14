@@ -28,11 +28,13 @@ class TabBarController: UITabBarController {
     // MARK: - Private Methods
     
     private func configureTabBarController() {
+        tabBar.tintColor = UIColor(color: .activeTabBar)
         tabBar.unselectedItemTintColor = UIColor(color: .inactiveTabBar)
+        tabBar.backgroundColor = UIColor(color: .backgroundTabBar)
+        
         tabBar.layer.borderWidth = LayoutConstants.tabBorderWidth
         tabBar.layer.borderColor = UIColor(color: .borderTabBar)?.cgColor
-        tabBar.backgroundColor = UIColor(color: .backgroundTabBar)
-        tabBar.tintColor = UIColor(color: .activeTabBar)
+        
         configureAppearanceTabBarController()
     }
     
