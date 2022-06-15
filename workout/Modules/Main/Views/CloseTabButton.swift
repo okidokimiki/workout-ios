@@ -11,6 +11,7 @@ import UIKit
 class CloseTabButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
+
         configureButton()
     }
     
@@ -23,7 +24,6 @@ class CloseTabButton: UIButton {
         setImage(UIImage(image: .xmark), for: .normal)
         imageView?.tintColor = UIColor(color: .accent1)
         backgroundColor = UIColor(color: .accent3)
-        
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
