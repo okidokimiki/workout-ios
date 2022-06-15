@@ -20,5 +20,6 @@ extension UIImage {
         case main
         case profile
         case statistic
+        case xmark
     }
 }

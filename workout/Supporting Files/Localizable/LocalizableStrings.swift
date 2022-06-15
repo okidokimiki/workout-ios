@@ -11,6 +11,7 @@ enum LocalizableStrings: String {
     case tabBarMainSectionTitle = "tabBarMainSection.title"
     case tabBarStatisticsSectionTitle = "tabBarStatisticsSection.title"
     case tabBarProfileSectionTitle = "tabBarProfileSection.title"
+    case newWorkoutLabelTitle = "newWorkoutLabel.title"
     
     // MARK: - localizedString
     
