@@ -11,7 +11,7 @@ class NewWorkoutView: UIView {
     // MARK: - Private Properties
     
     private enum LayoutConstraints {
-        static let padding: CGFloat = 21.96
+        static let padding: CGFloat = 22
         
         enum NewWorkoutLabel {
             static let bottomPadding: CGFloat = 28
@@ -22,7 +22,6 @@ class NewWorkoutView: UIView {
         
         enum CloseTabButton {
             static let leadingPadding: CGFloat = 57
-            static let heightAnchor: CGFloat = 30
             static let widthAnchor: CGFloat = 30
         }
     }
@@ -32,7 +31,7 @@ class NewWorkoutView: UIView {
     }()
     
     private lazy var closeTabButton: CloseTabButton = {
-        return NewWorkoutView.makeCloseTabButton()
+        return CloseTabButton()
     }()
     
     // MARK: - Initalization
@@ -72,11 +71,6 @@ class NewWorkoutView: UIView {
         return label
     }
     
-    static func makeCloseTabButton() -> CloseTabButton {
-        let button = CloseTabButton()
-        return button
-    }
-    
     // MARK: - Layout
     
     override func layoutSubviews() {
@@ -100,7 +94,7 @@ class NewWorkoutView: UIView {
             closeTabButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             closeTabButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
                                                      constant: -LayoutConstraints.padding),
-            closeTabButton.heightAnchor.constraint(equalToConstant: LayoutConstraints.CloseTabButton.heightAnchor),
+            closeTabButton.heightAnchor.constraint(equalToConstant: LayoutConstraints.CloseTabButton.widthAnchor),
             closeTabButton.widthAnchor.constraint(equalToConstant: LayoutConstraints.CloseTabButton.widthAnchor)
         ])
     }
