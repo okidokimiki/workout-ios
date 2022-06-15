@@ -8,8 +8,11 @@
 import UIKit
 
 class NewWorkoutView: UIView {
+    // MARK: - Private Properties
+    
     private enum LayoutConstraints {
         static let padding: CGFloat = 21.96
+        
         enum NewWorkoutLabel {
             static let bottomPadding: CGFloat = 28
             static let trailingPadding: CGFloat = 57
@@ -32,8 +35,11 @@ class NewWorkoutView: UIView {
         return NewWorkoutView.makeCloseTabButton()
     }()
     
+    // MARK: - Initalization
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         configureView()
         addSubviews()
     }
@@ -42,6 +48,19 @@ class NewWorkoutView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private Methods
+    
+    private func configureView() {
+        backgroundColor = UIColor(color: .background)
+    }
+    
+    private func addSubviews() {
+        addSubview(newWorkoutLabel)
+        addSubview(closeTabButton)
+    }
+    
+    // MARK: - Creating Subviews
+
     static func makeNewWorkoutLabel() -> UILabel {
         let label = UILabel()
         label.font = Font.display1.type
@@ -58,25 +77,13 @@ class NewWorkoutView: UIView {
         return button
     }
     
+    // MARK: - Layout
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        roundOff(closeTabButton, with: LayoutConstraints.CloseTabButton.widthAnchor / 2)
-    }
-    
-    private func roundOff(_ view: UIView, with radius: CGFloat) {
-        view.layer.cornerRadius = radius
-    }
-    
-    private func configureView() {
-        backgroundColor = UIColor(color: .background)
-    }
-    
-    private func addSubviews() {
-        addSubview(newWorkoutLabel)
+        closeTabButton.roundOffWithRadius(LayoutConstraints.CloseTabButton.widthAnchor / 2)
         activateNewWorkoutLabelConstraints()
-        
-        addSubview(closeTabButton)
         activateCloseTabButtonConstrains()
     }
     
