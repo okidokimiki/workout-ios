@@ -37,8 +37,7 @@ class WeatherView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        configureView()
+        configure()
         addSubviews()
     }
     
@@ -48,7 +47,7 @@ class WeatherView: UIView {
     
     // MARK: - Private Methods
     
-    private func configureView() {
+    private func configure() {
         makeShadowUnderView()
         backgroundColor = UIColor(color: .weatherBackground)
         translatesAutoresizingMaskIntoConstraints = false

@@ -26,8 +26,7 @@ class PlusButton: UIButton {
         
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        
-        configureButton()
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +35,7 @@ class PlusButton: UIButton {
     
     // MARK: - Private Methods
     
-    private func configureButton() {
+    private func configure() {
         makeShadowUnderView()
         tintColor = UIColor(color: .accent4)
         setImage(UIImage(image: .plus), for: .normal)

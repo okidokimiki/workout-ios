@@ -68,8 +68,7 @@ class MainView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        configureView()
+        configure()
         addSubviews()
     }
     
@@ -90,7 +89,7 @@ class MainView: UIView {
     
     // MARK: - Private Methods
     
-    private func configureView() {
+    private func configure() {
         backgroundColor = UIColor(color: .background)
     }
     
