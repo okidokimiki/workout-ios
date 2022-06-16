@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
     
     private let appearance = UITabBarItem.appearance()
     
-    // MARK: - UITabBarController Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -99,15 +99,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04060FD728593B3D00DF93F6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				04F6B65C2852018000C7A4F9 /* Localizable */,
-				04F6B661285214AB00C7A4F9 /* Font */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		040FDFAC28526B8400E1B6B7 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +128,9 @@
 		04117385284E55370058BE9C /* workout */ = {
 			isa = PBXGroup;
 			children = (
-				0411739A284E55580058BE9C /* App */,
-				04FE09F7284E5C0800839CBF /* Modules */,
-				0411738F284E55380058BE9C /* Assets.xcassets */,
-				0411739B284E55990058BE9C /* Supporting Files */,
+				04C321C0285B4E3900248965 /* Sources */,
+				04C321C1285B4E5700248965 /* Resources */,
+				04117394284E55380058BE9C /* Info.plist */,
 			);
 			path = workout;
 			sourceTree = "<group>";
@@ -154,37 +144,38 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		0411739B284E55990058BE9C /* Supporting Files */ = {
+		04C321C0285B4E3900248965 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0411739A284E55580058BE9C /* App */,
+				04FE09F7284E5C0800839CBF /* Modules */,
+				04C321C2285B51FC00248965 /* Enums */,
 				04FE09F9284E5DC500839CBF /* Extensions */,
-				04060FD728593B3D00DF93F6 /* Resources */,
-				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
-				04117391284E55380058BE9C /* LaunchScreen.storyboard */,
-				04117394284E55380058BE9C /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		04F6B65C2852018000C7A4F9 /* Localizable */ = {
+		04C321C1285B4E5700248965 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04F6B65D2852019300C7A4F9 /* LocalizableStrings.swift */,
+				0411738F284E55380058BE9C /* Assets.xcassets */,
+				04117391284E55380058BE9C /* LaunchScreen.storyboard */,
 				04F6B6592852014500C7A4F9 /* Localizable.strings */,
+				04F6B67C2852179A00C7A4F9 /* Fonts */,
 			);
-			path = Localizable;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		04F6B661285214AB00C7A4F9 /* Font */ = {
+		04C321C2285B51FC00248965 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				04F6B67A2852166500C7A4F9 /* Font.swift */,
-				04F6B67C2852179A00C7A4F9 /* Roboto */,
+				04F6B65D2852019300C7A4F9 /* LocalizableStrings.swift */,
 			);
-			path = Font;
+			path = Enums;
 			sourceTree = "<group>";
 		};
-		04F6B67C2852179A00C7A4F9 /* Roboto */ = {
+		04F6B67C2852179A00C7A4F9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				04F6B6652852154D00C7A4F9 /* Roboto-Black.ttf */,
@@ -200,12 +191,13 @@
 				04F6B6632852154D00C7A4F9 /* Roboto-Thin.ttf */,
 				04F6B66B2852154D00C7A4F9 /* Roboto-ThinItalic.ttf */,
 			);
-			path = Roboto;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		04FE09F7284E5C0800839CBF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
 				ED801E272851ECB300B22786 /* TabBar */,
 				04FE09FC284E7F7500839CBF /* Main */,
 			);
@@ -240,8 +232,8 @@
 			children = (
 				04FE09FF284E80AB00839CBF /* Assembly */,
 				04FE0A08284E81A500839CBF /* Protocols */,
-				04FE09F8284E5C1E00839CBF /* Views */,
 				04FE0A05284E815E00839CBF /* Presenters */,
+				04FE09F8284E5C1E00839CBF /* Views */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -560,7 +552,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CSN823SSAY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "workout/Supporting Files/Info.plist";
+				INFOPLIST_FILE = workout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -589,7 +581,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CSN823SSAY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "workout/Supporting Files/Info.plist";
+				INFOPLIST_FILE = workout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
