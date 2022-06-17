@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  workout
+
+  Created by Mikhail Chaus on 09.06.2022.
+  
+*/
+
+"tabBarMainSection.title" = "Главная";
+"tabBarStatisticsSection.title" = "Статистика";
+"tabBarProfileSection.title" = "Профиль";
+
+"plusButton.title" = "Добавить";
+
+"weatherLabel.title" = "Солнечно";
+"weatherLabel.subtitle" = "Хорошая погода, чтобы позаниматься на улице";
+
+"newWorkoutLabel.title" = "Новая Тренировка";
+
+
+"blaBlaBla.title" = "Раз Два Три Четыре Пять Шесть Семь Восемь Девять Десять";

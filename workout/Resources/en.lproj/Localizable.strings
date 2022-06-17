@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  workout
+
+  Created by Mikhail Chaus on 09.06.2022.
+  
+*/
+
+"tabBarMainSection.title" = "Main";
+"tabBarStatisticsSection.title" = "Statistics";
+"tabBarProfileSection.title" = "Profile";
+
+"plusButton.title" = "Add workout";
+
+"weatherLabel.title" = "Sunny";
+"weatherLabel.subtitle" = "Nice weather to work out outside";
+
+"newWorkoutLabel.title" = "New Workout";
+
+"blaBlaBla.title" = "One Two Three Four Five Six Seven Eight Nine Ten";

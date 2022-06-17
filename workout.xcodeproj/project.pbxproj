@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAA28526B8100E1B6B7 /* CalendarView.swift */; };
+		040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAE285274A800E1B6B7 /* PlusButton.swift */; };
+		040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB0285289EB00E1B6B7 /* WeatherView.swift */; };
+		040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */; };
+		040FDFB62852980E00E1B6B7 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB52852980E00E1B6B7 /* CalendarCollectionView.swift */; };
+		040FDFB82852983800E1B6B7 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB72852983800E1B6B7 /* CalendarCollectionViewCell.swift */; };
 		04117387284E55370058BE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117386284E55370058BE9C /* AppDelegate.swift */; };
 		04117389284E55370058BE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117388284E55370058BE9C /* SceneDelegate.swift */; };
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
 		04117390284E55380058BE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0411738F284E55380058BE9C /* Assets.xcassets */; };
 		04117393284E55380058BE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04117391284E55380058BE9C /* LaunchScreen.storyboard */; };
+		04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE5285C997B00E5EC74 /* FontName.swift */; };
+		04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE7285C99D900E5EC74 /* FontSize.swift */; };
+		04AF4EF2285CBC7300E5EC74 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */; };
+		04AF4EF3285CBC7300E5EC74 /* NewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF1285CBC7300E5EC74 /* NewWorkoutView.swift */; };
+		04AF4EF5285CBD1700E5EC74 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */; };
 		04F6B6572852014500C7A4F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04F6B6592852014500C7A4F9 /* Localizable.strings */; };
 		04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6B65D2852019300C7A4F9 /* LocalizableStrings.swift */; };
 		04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6B65F2852134B00C7A4F9 /* UIImage + Extension.swift */; };
@@ -27,7 +38,7 @@
 		04F6B6772852154D00C7A4F9 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F6B66B2852154D00C7A4F9 /* Roboto-ThinItalic.ttf */; };
 		04F6B6782852154D00C7A4F9 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F6B66C2852154D00C7A4F9 /* Roboto-Light.ttf */; };
 		04F6B6792852154D00C7A4F9 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F6B66D2852154D00C7A4F9 /* Roboto-Regular.ttf */; };
-		04F6B67B2852166500C7A4F9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6B67A2852166500C7A4F9 /* Font.swift */; };
+		04F6B67B2852166500C7A4F9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6B67A2852166500C7A4F9 /* Fonts.swift */; };
 		04F6B67E2852342700C7A4F9 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6B67D2852342700C7A4F9 /* UIFont + Extension.swift */; };
 		04FE09FB284E5DD100839CBF /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE09FA284E5DD100839CBF /* UIColor + Extension.swift */; };
 		04FE09FE284E7FD600839CBF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE09FD284E7FD600839CBF /* MainView.swift */; };
@@ -37,11 +48,17 @@
 		04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A09284E81AC00839CBF /* MainViewInput.swift */; };
 		04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0B284E81F700839CBF /* MainViewOutput.swift */; };
 		04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */; };
-		ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* WorkoutTabs.swift */; };
-		ED970E622851F451004A4E06 /* WorkoutTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */; };
+		ED801E292851ECD100B22786 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* Tabs.swift */; };
+		ED970E622851F451004A4E06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040FDFAA28526B8100E1B6B7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		040FDFAE285274A800E1B6B7 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
+		040FDFB0285289EB00E1B6B7 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		040FDFB52852980E00E1B6B7 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
+		040FDFB72852983800E1B6B7 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		04117383284E55370058BE9C /* workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04117386284E55370058BE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04117388284E55370058BE9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,11 @@
 		0411738F284E55380058BE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04117392284E55380058BE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04117394284E55380058BE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AF4EE5285C997B00E5EC74 /* FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
+		04AF4EE7285C99D900E5EC74 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
+		04AF4EF1285CBC7300E5EC74 /* NewWorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutView.swift; sourceTree = "<group>"; };
+		04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		04F6B6582852014500C7A4F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04F6B65A2852016600C7A4F9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		04F6B65B2852016600C7A4F9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -66,7 +88,7 @@
 		04F6B66B2852154D00C7A4F9 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
 		04F6B66C2852154D00C7A4F9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		04F6B66D2852154D00C7A4F9 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		04F6B67A2852166500C7A4F9 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		04F6B67A2852166500C7A4F9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		04F6B67D2852342700C7A4F9 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		04FE09FA284E5DD100839CBF /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		04FE09FD284E7FD600839CBF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -76,8 +98,8 @@
 		04FE0A09284E81AC00839CBF /* MainViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
 		04FE0A0B284E81F700839CBF /* MainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
 		04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUiDelegate.swift; sourceTree = "<group>"; };
-		ED801E282851ECD100B22786 /* WorkoutTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabs.swift; sourceTree = "<group>"; };
-		ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTabBarController.swift; sourceTree = "<group>"; };
+		ED801E282851ECD100B22786 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		ED970E612851F451004A4E06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +113,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040FDFAC28526B8400E1B6B7 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				040FDFAA28526B8100E1B6B7 /* CalendarView.swift */,
+				040FDFB52852980E00E1B6B7 /* CalendarCollectionView.swift */,
+				040FDFB72852983800E1B6B7 /* CalendarCollectionViewCell.swift */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
 		0411737A284E55370058BE9C = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +142,9 @@
 		04117385284E55370058BE9C /* workout */ = {
 			isa = PBXGroup;
 			children = (
-				0411739A284E55580058BE9C /* App */,
-				04FE09F7284E5C0800839CBF /* Modules */,
-				0411738F284E55380058BE9C /* Assets.xcassets */,
-				0411739B284E55990058BE9C /* Supporting Files */,
+				04C321C0285B4E3900248965 /* Sources */,
+				04C321C1285B4E5700248965 /* Resources */,
+				04117394284E55380058BE9C /* Info.plist */,
 			);
 			path = workout;
 			sourceTree = "<group>";
@@ -123,43 +154,96 @@
 			children = (
 				04117386284E55370058BE9C /* AppDelegate.swift */,
 				04117388284E55370058BE9C /* SceneDelegate.swift */,
-				ED801E272851ECB300B22786 /* WorkoutTabBar */,
 			);
 			path = App;
 			sourceTree = "<group>";
 		};
-		0411739B284E55990058BE9C /* Supporting Files */ = {
+		04AF4EE2285C935700E5EC74 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04FE0A0B284E81F700839CBF /* MainViewOutput.swift */,
+				0411738A284E55370058BE9C /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04AF4EE4285C96A800E5EC74 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				04FE0A00284E80BE00839CBF /* MainViewModuleBuilder.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		04AF4EEF285CBC7300E5EC74 /* NewWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				04AF4EF7285CBF4100E5EC74 /* Controllers */,
+				04AF4EF6285CBF3D00E5EC74 /* Views */,
+			);
+			path = NewWorkout;
+			sourceTree = "<group>";
+		};
+		04AF4EF6285CBF3D00E5EC74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04AF4EF1285CBC7300E5EC74 /* NewWorkoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04AF4EF7285CBF4100E5EC74 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04AF4EF8285CC20500E5EC74 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				ED970E612851F451004A4E06 /* TabBarController.swift */,
+				04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		04C321C0285B4E3900248965 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0411739A284E55580058BE9C /* App */,
+				04FE09F7284E5C0800839CBF /* Modules */,
+				04C321C2285B51FC00248965 /* Enums */,
 				04FE09F9284E5DC500839CBF /* Extensions */,
-				04F6B65C2852018000C7A4F9 /* Localizable */,
-				04F6B661285214AB00C7A4F9 /* Font */,
-				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		04C321C1285B4E5700248965 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0411738F284E55380058BE9C /* Assets.xcassets */,
 				04117391284E55380058BE9C /* LaunchScreen.storyboard */,
-				04117394284E55380058BE9C /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		04F6B65C2852018000C7A4F9 /* Localizable */ = {
-			isa = PBXGroup;
-			children = (
-				04F6B65D2852019300C7A4F9 /* LocalizableStrings.swift */,
 				04F6B6592852014500C7A4F9 /* Localizable.strings */,
+				04F6B67C2852179A00C7A4F9 /* Fonts */,
 			);
-			path = Localizable;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		04F6B661285214AB00C7A4F9 /* Font */ = {
+		04C321C2285B51FC00248965 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				04F6B67A2852166500C7A4F9 /* Font.swift */,
-				04F6B67C2852179A00C7A4F9 /* Roboto */,
+				ED801E282851ECD100B22786 /* Tabs.swift */,
+				04F6B67A2852166500C7A4F9 /* Fonts.swift */,
+				04AF4EE5285C997B00E5EC74 /* FontName.swift */,
+				04AF4EE7285C99D900E5EC74 /* FontSize.swift */,
+				04F6B65D2852019300C7A4F9 /* LocalizableStrings.swift */,
 			);
-			path = Font;
+			path = Enums;
 			sourceTree = "<group>";
 		};
-		04F6B67C2852179A00C7A4F9 /* Roboto */ = {
+		04F6B67C2852179A00C7A4F9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				04F6B6652852154D00C7A4F9 /* Roboto-Black.ttf */,
@@ -175,13 +259,16 @@
 				04F6B6632852154D00C7A4F9 /* Roboto-Thin.ttf */,
 				04F6B66B2852154D00C7A4F9 /* Roboto-ThinItalic.ttf */,
 			);
-			path = Roboto;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		04FE09F7284E5C0800839CBF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
+				04AF4EF8285CC20500E5EC74 /* Basic */,
 				04FE09FC284E7F7500839CBF /* Main */,
+				04AF4EEF285CBC7300E5EC74 /* NewWorkout */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -189,8 +276,11 @@
 		04FE09F8284E5C1E00839CBF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0411738A284E55370058BE9C /* MainViewController.swift */,
+				04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */,
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
+				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
+				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
+				040FDFAC28526B8400E1B6B7 /* CalendarView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +291,7 @@
 				04FE09FA284E5DD100839CBF /* UIColor + Extension.swift */,
 				04F6B65F2852134B00C7A4F9 /* UIImage + Extension.swift */,
 				04F6B67D2852342700C7A4F9 /* UIFont + Extension.swift */,
+				040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -208,47 +299,21 @@
 		04FE09FC284E7F7500839CBF /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				04FE09FF284E80AB00839CBF /* Assembly */,
-				04FE0A08284E81A500839CBF /* Protocols */,
-				04FE09F8284E5C1E00839CBF /* Views */,
+				04AF4EE4285C96A800E5EC74 /* Assembly */,
 				04FE0A05284E815E00839CBF /* Presenters */,
+				04AF4EE2285C935700E5EC74 /* Controllers */,
+				04FE09F8284E5C1E00839CBF /* Views */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		04FE09FF284E80AB00839CBF /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				04FE0A00284E80BE00839CBF /* MainViewModuleBuilder.swift */,
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		04FE0A05284E815E00839CBF /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				04FE0A09284E81AC00839CBF /* MainViewInput.swift */,
 				04FE0A06284E817000839CBF /* MainPresenter.swift */,
 			);
 			path = Presenters;
-			sourceTree = "<group>";
-		};
-		04FE0A08284E81A500839CBF /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				04FE0A0B284E81F700839CBF /* MainViewOutput.swift */,
-				04FE0A09284E81AC00839CBF /* MainViewInput.swift */,
-				04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		ED801E272851ECB300B22786 /* WorkoutTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				ED970E612851F451004A4E06 /* WorkoutTabBarController.swift */,
-				ED801E282851ECD100B22786 /* WorkoutTabs.swift */,
-			);
-			path = WorkoutTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,21 +422,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F6B67B2852166500C7A4F9 /* Font.swift in Sources */,
+				04F6B67B2852166500C7A4F9 /* Fonts.swift in Sources */,
+				040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */,
 				04F6B67E2852342700C7A4F9 /* UIFont + Extension.swift in Sources */,
+				04AF4EF3285CBC7300E5EC74 /* NewWorkoutView.swift in Sources */,
+				04AF4EF2285CBC7300E5EC74 /* NewWorkoutViewController.swift in Sources */,
 				0411738B284E55370058BE9C /* MainViewController.swift in Sources */,
 				04FE09FB284E5DD100839CBF /* UIColor + Extension.swift in Sources */,
 				04FE0A07284E817000839CBF /* MainPresenter.swift in Sources */,
 				04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */,
 				04117387284E55370058BE9C /* AppDelegate.swift in Sources */,
 				04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */,
-				ED970E622851F451004A4E06 /* WorkoutTabBarController.swift in Sources */,
+				04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */,
+				ED970E622851F451004A4E06 /* TabBarController.swift in Sources */,
+				04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */,
+				040FDFB62852980E00E1B6B7 /* CalendarCollectionView.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
+				040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */,
 				04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */,
 				04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */,
 				04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
-				ED801E292851ECD100B22786 /* WorkoutTabs.swift in Sources */,
+				040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */,
+				040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */,
+				040FDFB82852983800E1B6B7 /* CalendarCollectionViewCell.swift in Sources */,
+				04AF4EF5285CBD1700E5EC74 /* CloseButton.swift in Sources */,
+				ED801E292851ECD100B22786 /* Tabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
 				04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */,
 			);
@@ -526,7 +602,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CSN823SSAY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "workout/Supporting Files/Info.plist";
+				INFOPLIST_FILE = workout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -555,7 +631,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CSN823SSAY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "workout/Supporting Files/Info.plist";
+				INFOPLIST_FILE = workout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
