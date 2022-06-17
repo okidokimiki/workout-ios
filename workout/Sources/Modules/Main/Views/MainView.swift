@@ -128,7 +128,7 @@ class MainView: UIView {
     
     static func makeUserNameLabel() -> UILabel {
         let label = UILabel()
-        label.font = Font.display1.type
+        label.font = Fonts.display1.value
         label.lineBreakMode = .byTruncatingTail
         label.textColor = UIColor(color: .title1)
         label.text = LocalizableStrings.blaBlaBlaTitle.localizedString

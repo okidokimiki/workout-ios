@@ -8,9 +8,9 @@
 import UIKit
 
 extension UIFont {
-    // MARK: - Public Methods
+    // MARK: - Static Methods
     
-    static func makeFontWith(title: FontTitle, type: FontType, size: FontSize) -> UIFont? {
-        return UIFont(name: title.name + "-" + type.name, size: size.value)
+    static func makeRobotoFont(name: FontName.Roboto, size: FontSize) -> UIFont? {
+        return UIFont(name: name.name, size: size.value)
     }
 }

@@ -66,7 +66,7 @@ class WeatherView: UIView {
     static func makeTitleLabel() -> UILabel {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = Font.display3.type
+        label.font = Fonts.display3.value
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor(color: .title1)
         label.text = LocalizableStrings.weatherLabelTitle.localizedString
@@ -78,7 +78,7 @@ class WeatherView: UIView {
     static func makeSubtitleLabel() -> UILabel {
         let label = UILabel()
         label.numberOfLines = 2
-        label.font = Font.display5.type
+        label.font = Fonts.display5.value
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor(color: .weatherSubtitle)
         label.text = LocalizableStrings.weatherLabelSubtitle.localizedString

@@ -45,7 +45,7 @@ class PlusButton: UIButton {
                                        right: 0)
         
         titleLabel?.textColor = UIColor(color: .accent4)
-        titleLabel?.font = Font.buttonSmall.type
+        titleLabel?.font = Fonts.buttonSmall.value
         setTitle(LocalizableStrings.plusButtonTitle.localizedString, for: .normal)
         titleEdgeInsets = UIEdgeInsets(top: LayoutConstants.Title.topPadding,
                                        left: -LayoutConstants.Title.leftPadding,
