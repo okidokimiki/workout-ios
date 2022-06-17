@@ -18,7 +18,7 @@ class NewWorkoutView: UIView {
         return CloseButton(type: .system)
     }()
     
-    // MARK: - Initalization
+    // MARK: - Initilization
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,6 +82,8 @@ class NewWorkoutView: UIView {
         ])
     }
 }
+
+// MARK: - Constraints
 
 private extension NewWorkoutView {
     enum Constraints {

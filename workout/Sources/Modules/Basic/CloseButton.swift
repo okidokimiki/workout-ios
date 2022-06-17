@@ -22,10 +22,21 @@ class CloseButton: UIButton {
     // MARK: - Private Methods
     
     private func configure() {
-        layer.borderWidth = 0
         setImage(UIImage(image: .xmark), for: .normal)
         imageView?.tintColor = UIColor(color: .accent1)
+        layer.borderWidth = Constants.Layer.borderWidth
         backgroundColor = UIColor(color: .accent3)
         translatesAutoresizingMaskIntoConstraints = false
+    }
+}
+
+// MARK: - Constants
+
+private extension CloseButton {
+    enum Constants {
+        
+        enum Layer {
+            static let borderWidth: CGFloat = 0
+        }
     }
 }

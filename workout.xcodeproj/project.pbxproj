@@ -200,6 +200,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		04AF4EF8285CC20500E5EC74 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				ED970E612851F451004A4E06 /* TabBarController.swift */,
+				04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		04C321C0285B4E3900248965 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
-				ED970E612851F451004A4E06 /* TabBarController.swift */,
+				04AF4EF8285CC20500E5EC74 /* Basic */,
 				04FE09FC284E7F7500839CBF /* Main */,
 				04AF4EEF285CBC7300E5EC74 /* NewWorkout */,
 			);
@@ -270,7 +279,6 @@
 				04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */,
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
 				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
-				04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */,
 				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
 				040FDFAC28526B8400E1B6B7 /* CalendarView */,
 			);
