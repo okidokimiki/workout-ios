@@ -48,16 +48,16 @@
 		04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A09284E81AC00839CBF /* MainViewInput.swift */; };
 		04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0B284E81F700839CBF /* MainViewOutput.swift */; };
 		04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */; };
-		ED279FCD285BDFFD00F46048 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED279FCC285BDFFD00F46048 /* UIStackView+Extension.swift */; };
 		ED801E292851ECD100B22786 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* Tabs.swift */; };
 		ED970E622851F451004A4E06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* TabBarController.swift */; };
-		ED970E66285247ED004A4E06 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E65285247ED004A4E06 /* ProfileView.swift */; };
-		ED970E68285247F6004A4E06 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E67285247F6004A4E06 /* ProfileViewController.swift */; };
-		ED970E6B28524829004A4E06 /* ProfileViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E6A28524829004A4E06 /* ProfileViewModuleBuilder.swift */; };
-		ED970E6E28524BD9004A4E06 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E6D28524BD9004A4E06 /* ProfilePresenter.swift */; };
-		ED970E7128524C24004A4E06 /* ProfileViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E7028524C24004A4E06 /* ProfileViewInput.swift */; };
-		ED970E7528524C3D004A4E06 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E7428524C3D004A4E06 /* ProfileViewOutput.swift */; };
-		ED970E7728524C66004A4E06 /* ProfileViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E7628524C66004A4E06 /* ProfileViewUiDelegate.swift */; };
+		EDD9C966285CF2200017C195 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C965285CF2200017C195 /* UIStackView+Extension.swift */; };
+		EDD9C975285CF2850017C195 /* ProfileViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C96B285CF2850017C195 /* ProfileViewModuleBuilder.swift */; };
+		EDD9C976285CF2850017C195 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C96D285CF2850017C195 /* ProfilePresenter.swift */; };
+		EDD9C977285CF2850017C195 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C96F285CF2850017C195 /* ProfileView.swift */; };
+		EDD9C978285CF2850017C195 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C970285CF2850017C195 /* ProfileViewController.swift */; };
+		EDD9C979285CF2850017C195 /* ProfileViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C972285CF2850017C195 /* ProfileViewInput.swift */; };
+		EDD9C97A285CF2850017C195 /* ProfileViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C973285CF2850017C195 /* ProfileViewOutput.swift */; };
+		EDD9C97B285CF2850017C195 /* ProfileViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C974285CF2850017C195 /* ProfileViewUiDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,16 +106,16 @@
 		04FE0A09284E81AC00839CBF /* MainViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewInput.swift; sourceTree = "<group>"; };
 		04FE0A0B284E81F700839CBF /* MainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
 		04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUiDelegate.swift; sourceTree = "<group>"; };
-		ED279FCC285BDFFD00F46048 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		ED970E65285247ED004A4E06 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		ED970E67285247F6004A4E06 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		ED970E6A28524829004A4E06 /* ProfileViewModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModuleBuilder.swift; sourceTree = "<group>"; };
-		ED970E6D28524BD9004A4E06 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
-		ED970E7028524C24004A4E06 /* ProfileViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewInput.swift; sourceTree = "<group>"; };
-		ED970E7428524C3D004A4E06 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
-		ED970E7628524C66004A4E06 /* ProfileViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewUiDelegate.swift; sourceTree = "<group>"; };
 		ED801E282851ECD100B22786 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		ED970E612851F451004A4E06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EDD9C965285CF2200017C195 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStackView+Extension.swift"; path = "workout/Supporting Files/Extensions/UIStackView+Extension.swift"; sourceTree = SOURCE_ROOT; };
+		EDD9C96B285CF2850017C195 /* ProfileViewModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModuleBuilder.swift; sourceTree = "<group>"; };
+		EDD9C96D285CF2850017C195 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		EDD9C96F285CF2850017C195 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EDD9C970285CF2850017C195 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EDD9C972285CF2850017C195 /* ProfileViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewInput.swift; sourceTree = "<group>"; };
+		EDD9C973285CF2850017C195 /* ProfileViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewOutput.swift; sourceTree = "<group>"; };
+		EDD9C974285CF2850017C195 /* ProfileViewUiDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewUiDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,9 +283,9 @@
 			children = (
 				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
 				04AF4EF8285CC20500E5EC74 /* Basic */,
-				ED970E6328524797004A4E06 /* Profile */,
 				04FE09FC284E7F7500839CBF /* Main */,
 				04AF4EEF285CBC7300E5EC74 /* NewWorkout */,
+				EDD9C969285CF2850017C195 /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				04FE09FA284E5DD100839CBF /* UIColor + Extension.swift */,
 				04F6B65F2852134B00C7A4F9 /* UIImage + Extension.swift */,
 				04F6B67D2852342700C7A4F9 /* UIFont + Extension.swift */,
-				ED279FCC285BDFFD00F46048 /* UIStackView+Extension.swift */,
+				EDD9C965285CF2200017C195 /* UIStackView+Extension.swift */,
 				040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */,
 			);
 			path = Extensions;
@@ -334,48 +334,49 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
-		ED970E6328524797004A4E06 /* Profile */ = {
+		EDD9C969285CF2850017C195 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				ED970E6F28524C13004A4E06 /* Protocols */,
-				ED970E6C28524BCB004A4E06 /* Presenter */,
-				ED970E692852480D004A4E06 /* Assembly */,
-				ED970E64285247D4004A4E06 /* Views */,
+				EDD9C96A285CF2850017C195 /* Assembly */,
+				EDD9C96C285CF2850017C195 /* Presenter */,
+				EDD9C96E285CF2850017C195 /* Views */,
+				EDD9C971285CF2850017C195 /* Protocols */,
 			);
-			path = Profile;
-			sourceTree = "<group>";
+			name = Profile;
+			path = workout/Sources/Modules/Profile;
+			sourceTree = SOURCE_ROOT;
 		};
-		ED970E64285247D4004A4E06 /* Views */ = {
+		EDD9C96A285CF2850017C195 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				ED970E67285247F6004A4E06 /* ProfileViewController.swift */,
-				ED970E65285247ED004A4E06 /* ProfileView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		ED970E692852480D004A4E06 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				ED970E6A28524829004A4E06 /* ProfileViewModuleBuilder.swift */,
+				EDD9C96B285CF2850017C195 /* ProfileViewModuleBuilder.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		ED970E6C28524BCB004A4E06 /* Presenter */ = {
+		EDD9C96C285CF2850017C195 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				ED970E6D28524BD9004A4E06 /* ProfilePresenter.swift */,
+				EDD9C96D285CF2850017C195 /* ProfilePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		ED970E6F28524C13004A4E06 /* Protocols */ = {
+		EDD9C96E285CF2850017C195 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ED970E7028524C24004A4E06 /* ProfileViewInput.swift */,
-				ED970E7428524C3D004A4E06 /* ProfileViewOutput.swift */,
-				ED970E7628524C66004A4E06 /* ProfileViewUiDelegate.swift */,
+				EDD9C96F285CF2850017C195 /* ProfileView.swift */,
+				EDD9C970285CF2850017C195 /* ProfileViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDD9C971285CF2850017C195 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EDD9C972285CF2850017C195 /* ProfileViewInput.swift */,
+				EDD9C973285CF2850017C195 /* ProfileViewOutput.swift */,
+				EDD9C974285CF2850017C195 /* ProfileViewUiDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -488,6 +489,7 @@
 			files = (
 				04F6B67B2852166500C7A4F9 /* Fonts.swift in Sources */,
 				040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */,
+				EDD9C97B285CF2850017C195 /* ProfileViewUiDelegate.swift in Sources */,
 				04F6B67E2852342700C7A4F9 /* UIFont + Extension.swift in Sources */,
 				04AF4EF3285CBC7300E5EC74 /* NewWorkoutView.swift in Sources */,
 				04AF4EF2285CBC7300E5EC74 /* NewWorkoutViewController.swift in Sources */,
@@ -496,33 +498,32 @@
 				04FE0A07284E817000839CBF /* MainPresenter.swift in Sources */,
 				04FE0A0A284E81AC00839CBF /* MainViewInput.swift in Sources */,
 				04117387284E55370058BE9C /* AppDelegate.swift in Sources */,
-				ED970E7128524C24004A4E06 /* ProfileViewInput.swift in Sources */,
-				ED279FCD285BDFFD00F46048 /* UIStackView+Extension.swift in Sources */,
 				04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */,
-				ED970E68285247F6004A4E06 /* ProfileViewController.swift in Sources */,
-				ED970E6B28524829004A4E06 /* ProfileViewModuleBuilder.swift in Sources */,
-				ED970E7528524C3D004A4E06 /* ProfileViewOutput.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
-				ED970E66285247ED004A4E06 /* ProfileView.swift in Sources */,
 				04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */,
+				EDD9C975285CF2850017C195 /* ProfileViewModuleBuilder.swift in Sources */,
 				ED970E622851F451004A4E06 /* TabBarController.swift in Sources */,
 				04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */,
 				040FDFB62852980E00E1B6B7 /* CalendarCollectionView.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
 				040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */,
 				04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */,
+				EDD9C966285CF2200017C195 /* UIStackView+Extension.swift in Sources */,
 				04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */,
 				04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
-				ED970E7728524C66004A4E06 /* ProfileViewUiDelegate.swift in Sources */,
-				ED970E6E28524BD9004A4E06 /* ProfilePresenter.swift in Sources */,
+				EDD9C979285CF2850017C195 /* ProfileViewInput.swift in Sources */,
+				EDD9C978285CF2850017C195 /* ProfileViewController.swift in Sources */,
 				040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */,
 				040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */,
+				EDD9C976285CF2850017C195 /* ProfilePresenter.swift in Sources */,
 				040FDFB82852983800E1B6B7 /* CalendarCollectionViewCell.swift in Sources */,
 				04AF4EF5285CBD1700E5EC74 /* CloseButton.swift in Sources */,
 				ED801E292851ECD100B22786 /* Tabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
+				EDD9C977285CF2850017C195 /* ProfileView.swift in Sources */,
 				04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */,
+				EDD9C97A285CF2850017C195 /* ProfileViewOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

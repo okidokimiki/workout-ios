@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
     private let titleLabel: UILabel = {
        let label = UILabel()
         label.text = "PROFILE"
-        label.font = Font.display1.type
+        label.font = Fonts.display1.value
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.textColor = .black
@@ -43,7 +43,7 @@ class ProfileViewController: UIViewController {
        let label = UILabel()
         label.text = "Height: 180"
         label.textColor = UIColor(color: .title1)
-        label.font = Font.buttonBig.type
+        label.font = Fonts.buttonBig.value
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +54,7 @@ class ProfileViewController: UIViewController {
        let label = UILabel()
         label.text = "Weight: 79"
         label.textColor = UIColor(color: .title1)
-        label.font = Font.buttonBig.type
+        label.font = Fonts.buttonBig.value
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
