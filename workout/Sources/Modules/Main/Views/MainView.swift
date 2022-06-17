@@ -60,10 +60,6 @@ class MainView: UIView {
         addSubview(weatherView)
     }
     
-    private func roundOff(_ view: UIView, with radius: CGFloat) {
-        view.layer.cornerRadius = radius
-    }
-    
     // MARK: - Creating Subviews
     
     static func makeUserPhotoImageView() -> UIImageView {
@@ -91,18 +87,18 @@ class MainView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        roundOff(calendarView, with: Constants.Layer.baseCornerRadius)
+        calendarView.roundOffWithRadius(Constants.Layer.baseCornerRadius)
         activateCalendarViewConstraints()
         
-        roundOff(userPhotoImageView, with: Constants.AutoLayout.userPhotoHeightAnchor / 2)
+        userPhotoImageView.roundOffWithRadius(Constants.AutoLayout.userPhotoHeightAnchor / 2)
         activateUserPhotoImageViewConstraints()
         
         activateUserNameLabelConstraints()
         
-        roundOff(plusButton, with: Constants.Layer.baseCornerRadius)
+        plusButton.roundOffWithRadius(Constants.Layer.baseCornerRadius)
         activatePlusButtonConstraints()
         
-        roundOff(weatherView, with: Constants.Layer.baseCornerRadius)
+        weatherView.roundOffWithRadius(Constants.Layer.baseCornerRadius)
         activateWeatherViewConstraints()
     }
     

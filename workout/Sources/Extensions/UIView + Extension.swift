@@ -19,6 +19,6 @@ extension UIView {
     }
     
     func roundOffWithRadius(_ cornerRadius: CGFloat) {
-        self.layer.cornerRadius = cornerRadius
+        layer.cornerRadius = cornerRadius
     }
 }
