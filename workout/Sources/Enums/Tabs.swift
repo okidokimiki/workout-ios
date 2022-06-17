@@ -48,7 +48,7 @@ enum Tabs: CaseIterable {
             let viewController = MainViewModuleBuilder.createModule()
             view = UINavigationController(rootViewController: viewController)
         case .statistics:
-            let viewController = UIViewController()
+            let viewController = NewWorkoutViewController()
             viewController.view.backgroundColor = UIColor(color: .accent2)
             view = UINavigationController(rootViewController: viewController)
         case .profile:

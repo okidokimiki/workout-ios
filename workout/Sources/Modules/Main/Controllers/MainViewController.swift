@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
     
     var presenter: MainViewOutput?
     
-    // MARK: - UIViewController Lifecycle
+    // MARK: - Lifecycle
     
     override func loadView() {
         let view = MainView()

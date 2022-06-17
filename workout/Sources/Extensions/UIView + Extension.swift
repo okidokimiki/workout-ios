@@ -17,4 +17,8 @@ extension UIView {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
     }
+    
+    func roundOffWithRadius(_ cornerRadius: CGFloat) {
+        self.layer.cornerRadius = cornerRadius
+    }
 }

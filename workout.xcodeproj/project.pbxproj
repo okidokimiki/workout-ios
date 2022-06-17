@@ -20,6 +20,9 @@
 		04117393284E55380058BE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04117391284E55380058BE9C /* LaunchScreen.storyboard */; };
 		04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE5285C997B00E5EC74 /* FontName.swift */; };
 		04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE7285C99D900E5EC74 /* FontSize.swift */; };
+		04AF4EF2285CBC7300E5EC74 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */; };
+		04AF4EF3285CBC7300E5EC74 /* NewWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF1285CBC7300E5EC74 /* NewWorkoutView.swift */; };
+		04AF4EF5285CBD1700E5EC74 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */; };
 		04F6B6572852014500C7A4F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04F6B6592852014500C7A4F9 /* Localizable.strings */; };
 		04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6B65D2852019300C7A4F9 /* LocalizableStrings.swift */; };
 		04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F6B65F2852134B00C7A4F9 /* UIImage + Extension.swift */; };
@@ -65,6 +68,9 @@
 		04117394284E55380058BE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04AF4EE5285C997B00E5EC74 /* FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
 		04AF4EE7285C99D900E5EC74 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
+		04AF4EF1285CBC7300E5EC74 /* NewWorkoutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutView.swift; sourceTree = "<group>"; };
+		04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		04F6B6582852014500C7A4F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		04F6B65A2852016600C7A4F9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		04F6B65B2852016600C7A4F9 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -169,6 +175,31 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		04AF4EEF285CBC7300E5EC74 /* NewWorkout */ = {
+			isa = PBXGroup;
+			children = (
+				04AF4EF7285CBF4100E5EC74 /* Controllers */,
+				04AF4EF6285CBF3D00E5EC74 /* Views */,
+			);
+			path = NewWorkout;
+			sourceTree = "<group>";
+		};
+		04AF4EF6285CBF3D00E5EC74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04AF4EF1285CBC7300E5EC74 /* NewWorkoutView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04AF4EF7285CBF4100E5EC74 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		04C321C0285B4E3900248965 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +259,7 @@
 				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
 				ED970E612851F451004A4E06 /* TabBarController.swift */,
 				04FE09FC284E7F7500839CBF /* Main */,
+				04AF4EEF285CBC7300E5EC74 /* NewWorkout */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -238,6 +270,7 @@
 				04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */,
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
 				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
+				04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */,
 				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
 				040FDFAC28526B8400E1B6B7 /* CalendarView */,
 			);
@@ -384,6 +417,8 @@
 				04F6B67B2852166500C7A4F9 /* Fonts.swift in Sources */,
 				040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */,
 				04F6B67E2852342700C7A4F9 /* UIFont + Extension.swift in Sources */,
+				04AF4EF3285CBC7300E5EC74 /* NewWorkoutView.swift in Sources */,
+				04AF4EF2285CBC7300E5EC74 /* NewWorkoutViewController.swift in Sources */,
 				0411738B284E55370058BE9C /* MainViewController.swift in Sources */,
 				04FE09FB284E5DD100839CBF /* UIColor + Extension.swift in Sources */,
 				04FE0A07284E817000839CBF /* MainPresenter.swift in Sources */,
@@ -403,6 +438,7 @@
 				040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */,
 				040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */,
 				040FDFB82852983800E1B6B7 /* CalendarCollectionViewCell.swift in Sources */,
+				04AF4EF5285CBD1700E5EC74 /* CloseButton.swift in Sources */,
 				ED801E292851ECD100B22786 /* Tabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
 				04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */,
