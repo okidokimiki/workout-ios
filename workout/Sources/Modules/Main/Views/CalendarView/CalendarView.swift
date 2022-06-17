@@ -10,11 +10,6 @@ import UIKit
 class CalendarView: UIView {
     // MARK: - Private Properties
     
-    private enum LayoutConstants {
-        static let padding: CGFloat = 5
-        static let leadingPadding: CGFloat = 105
-    }
-    
     private lazy var calendarCollectionView: CalendarCollectionView = {
         return CalendarView.makeCalendarCollectionView(self, self)
     }()
@@ -40,7 +35,6 @@ class CalendarView: UIView {
     
     private func addSubviews() {
         addSubview(calendarCollectionView)
-        activateCalendarCollectionViewConstraints()
     }
     
     // MARK: - Creating Subviews
@@ -58,17 +52,34 @@ class CalendarView: UIView {
     
     // MARK: - Layout
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        activateCalendarCollectionViewConstraints()
+    }
+    
     private func activateCalendarCollectionViewConstraints() {
         NSLayoutConstraint.activate([
             calendarCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                            constant: LayoutConstants.leadingPadding),
+                                                            constant: Constants.AutoLayout.leadingPadding),
             calendarCollectionView.topAnchor.constraint(equalTo: topAnchor,
-                                                        constant: LayoutConstants.padding),
+                                                        constant: Constants.AutoLayout.basePadding),
             calendarCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                             constant: -LayoutConstants.padding),
+                                                             constant: -Constants.AutoLayout.basePadding),
             calendarCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                                           constant: -LayoutConstants.padding)
+                                                           constant: -Constants.AutoLayout.basePadding)
         ])
+    }
+}
+
+// MARK: - Constants
+
+private extension CalendarView {
+    enum Constants {
+        
+        enum AutoLayout {
+            static let basePadding: CGFloat = 5
+            static let leadingPadding: CGFloat = 105
+        }
     }
 }
 

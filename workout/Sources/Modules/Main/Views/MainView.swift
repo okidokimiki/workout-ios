@@ -14,36 +14,6 @@ class MainView: UIView {
     
     // MARK: - Private Properties
     
-    private enum LayoutConstants {
-        static let padding: CGFloat = 13
-        static let cornerRadius: CGFloat = 10
-        
-        enum UserPhoto {
-            static let borderWidth: CGFloat = 5
-            static let heightAnchor: CGFloat = 100
-        }
-        
-        enum Calendar {
-            static let heightAnchor: CGFloat = 69
-        }
-        
-        enum UserName {
-            static let leadingPadding: CGFloat = 6
-            static let bottomPadding: CGFloat = 7
-            static let heightAnchor: CGFloat = 28
-        }
-        
-        enum Plus {
-            static let heightAnchor: CGFloat = 80
-            static let topPadding: CGFloat = 6
-        }
-        
-        enum Weather {
-            static let leadingPadding: CGFloat = 10
-            static let topPadding: CGFloat = 6
-        }
-    }
-    
     private lazy var userPhotoImageView: UIImageView = {
         return MainView.makeUserPhotoImageView()
     }()
@@ -76,17 +46,6 @@ class MainView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Public Methods
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        roundOff(userPhotoImageView, with: LayoutConstants.UserPhoto.heightAnchor / 2)
-        roundOff(calendarView, with: LayoutConstants.cornerRadius)
-        roundOff(plusButton, with: LayoutConstants.cornerRadius)
-        roundOff(weatherView, with: LayoutConstants.cornerRadius)
-    }
-    
     // MARK: - Private Methods
     
     private func configure() {
@@ -95,19 +54,10 @@ class MainView: UIView {
     
     private func addSubviews() {
         addSubview(calendarView)
-        activateCalendarViewConstraints()
-        
         addSubview(userPhotoImageView)
-        activateUserPhotoImageViewConstraints()
-        
         addSubview(userNameLabel)
-        activateUserNameLabelConstraints()
-        
         addSubview(plusButton)
-        activatePlusButtonConstraints()
-        
         addSubview(weatherView)
-        activateWeatherViewConstraints()
     }
     
     private func roundOff(_ view: UIView, with radius: CGFloat) {
@@ -118,7 +68,7 @@ class MainView: UIView {
     
     static func makeUserPhotoImageView() -> UIImageView {
         let imageView = UIImageView()
-        imageView.layer.borderWidth = LayoutConstants.UserPhoto.borderWidth
+        imageView.layer.borderWidth = Constants.Layer.userPhotoBorderWidth
         imageView.layer.borderColor = UIColor(color: .profileBorder)?.cgColor
         imageView.backgroundColor = UIColor(color: .profileBackground)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -139,59 +89,106 @@ class MainView: UIView {
     
     // MARK: - Layout
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        roundOff(calendarView, with: Constants.Layer.baseCornerRadius)
+        activateCalendarViewConstraints()
+        
+        roundOff(userPhotoImageView, with: Constants.AutoLayout.userPhotoHeightAnchor / 2)
+        activateUserPhotoImageViewConstraints()
+        
+        activateUserNameLabelConstraints()
+        
+        roundOff(plusButton, with: Constants.Layer.baseCornerRadius)
+        activatePlusButtonConstraints()
+        
+        roundOff(weatherView, with: Constants.Layer.baseCornerRadius)
+        activateWeatherViewConstraints()
+    }
+    
     private func activateCalendarViewConstraints() {
         NSLayoutConstraint.activate([
             calendarView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
-                                                  constant: LayoutConstants.padding),
+                                                  constant: Constants.AutoLayout.basePadding),
             calendarView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
-                                                   constant: -LayoutConstants.padding),
+                                                   constant: -Constants.AutoLayout.basePadding),
             calendarView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,
-                                              constant: LayoutConstants.UserPhoto.heightAnchor / 2),
-            calendarView.heightAnchor.constraint(equalToConstant: LayoutConstants.Calendar.heightAnchor)
+                                              constant: Constants.AutoLayout.userPhotoHeightAnchor / 2),
+            calendarView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.calendarHeightAnchor)
         ])
     }
     
     private func activateUserPhotoImageViewConstraints() {
         NSLayoutConstraint.activate([
             userPhotoImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
-                                                        constant: LayoutConstants.padding),
+                                                        constant: Constants.AutoLayout.basePadding),
             userPhotoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            userPhotoImageView.heightAnchor.constraint(equalToConstant: LayoutConstants.UserPhoto.heightAnchor),
-            userPhotoImageView.widthAnchor.constraint(equalToConstant: LayoutConstants.UserPhoto.heightAnchor)
+            userPhotoImageView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.userPhotoHeightAnchor),
+            userPhotoImageView.widthAnchor.constraint(equalToConstant: Constants.AutoLayout.userPhotoHeightAnchor)
         ])
     }
     
     private func activateUserNameLabelConstraints() {
         NSLayoutConstraint.activate([
             userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor,
-                                                   constant: LayoutConstants.UserName.leadingPadding),
+                                                   constant: Constants.AutoLayout.userNameLeadingPadding),
             userNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
-                                                    constant: -LayoutConstants.padding),
+                                                    constant: -Constants.AutoLayout.basePadding),
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor,
-                                                  constant: -LayoutConstants.UserName.bottomPadding),
-            userNameLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.UserName.heightAnchor)
+                                                  constant: -Constants.AutoLayout.userNameBottomPadding),
+            userNameLabel.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.userNameHeightAnchor)
         ])
     }
     
     private func activatePlusButtonConstraints() {
         NSLayoutConstraint.activate([
             plusButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
-                                                constant: LayoutConstants.padding),
+                                                constant: Constants.AutoLayout.basePadding),
             plusButton.topAnchor.constraint(equalTo: calendarView.bottomAnchor,
-                                            constant: LayoutConstants.Plus.topPadding),
-            plusButton.heightAnchor.constraint(equalToConstant: LayoutConstants.Plus.heightAnchor),
-            plusButton.widthAnchor.constraint(equalToConstant: LayoutConstants.Plus.heightAnchor)
+                                            constant: Constants.AutoLayout.plusTopPadding),
+            plusButton.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightAnchor),
+            plusButton.widthAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightAnchor)
         ])
     }
     
     private func activateWeatherViewConstraints() {
         NSLayoutConstraint.activate([
             weatherView.leadingAnchor.constraint(equalTo: plusButton.trailingAnchor,
-                                                constant: LayoutConstants.padding),
+                                                constant: Constants.AutoLayout.basePadding),
             weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor,
-                                             constant: LayoutConstants.Weather.topPadding),
+                                             constant: Constants.AutoLayout.weatherTopPadding),
             weatherView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
-                                                  constant: -LayoutConstants.padding)
+                                                  constant: -Constants.AutoLayout.basePadding)
         ])
+    }
+}
+
+// MARK: - Constants
+
+private extension MainView {
+    enum Constants {
+        
+        enum Layer {
+            static let userPhotoBorderWidth: CGFloat = 5
+            static let baseCornerRadius: CGFloat = 10
+        }
+        
+        enum AutoLayout {
+            static let basePadding: CGFloat = 13
+            
+            static let calendarHeightAnchor: CGFloat = 69
+            
+            static let userPhotoHeightAnchor: CGFloat = 100
+            
+            static let userNameLeadingPadding: CGFloat = 6
+            static let userNameBottomPadding: CGFloat = 7
+            static let userNameHeightAnchor: CGFloat = 28
+            
+            static let plusTopPadding: CGFloat = 6
+            static let plusHeightAnchor: CGFloat = 80
+            
+            static let weatherLeadingPadding: CGFloat = 10
+            static let weatherTopPadding: CGFloat = 6
+        }
     }
 }

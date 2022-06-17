@@ -12,12 +12,6 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     static let cellID = String(describing: CalendarCollectionViewCell.self)
     
-    // MARK: - Private Properties
-    
-    private enum LayoutConstants {
-        static let cornerRadius: CGFloat = 10
-    }
-    
     // MARK: - Initilization
     
     override init(frame: CGRect) {
@@ -33,6 +27,17 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     private func configure() {
         backgroundColor = UIColor(color: .accent2)
-        layer.cornerRadius = LayoutConstants.cornerRadius
+        layer.cornerRadius = Constants.Layer.cornerRadius
+    }
+}
+
+// MARK: - Constants
+
+private extension CalendarCollectionViewCell {
+    enum Constants {
+        
+        enum Layer {
+            static let cornerRadius: CGFloat = 10
+        }
     }
 }

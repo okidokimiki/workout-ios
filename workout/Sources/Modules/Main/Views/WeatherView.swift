@@ -10,21 +10,6 @@ import UIKit
 class WeatherView: UIView {
     // MARK: - Private Properties
     
-    private enum LayoutConstants {
-        static let leadingPadding: CGFloat = 11
-        
-        enum Title {
-            static let topPadding: CGFloat = 10
-            static let bottomPadding: CGFloat = 49
-        }
-        
-        enum Subtitle {
-            static let topPadding: CGFloat = 5
-            static let bottomPadding: CGFloat = 13
-            static let trailingPadding: CGFloat = 78
-        }
-    }
-        
     private lazy var titleLabel: UILabel = {
         return WeatherView.makeTitleLabel()
     }()
@@ -55,10 +40,7 @@ class WeatherView: UIView {
     
     private func addSubviews() {
         addSubview(titleLabel)
-        activateTitleLabelConstraints()
-        
         addSubview(subtitleLabel)
-        activateSubtitleLabelConstraints()
     }
     
     // MARK: - Creating Subviews
@@ -89,27 +71,51 @@ class WeatherView: UIView {
     
     // MARK: - Layout
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        activateTitleLabelConstraints()
+        activateSubtitleLabelConstraints()
+    }
+    
     private func activateTitleLabelConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                constant: LayoutConstants.leadingPadding),
+                                                constant: Constants.AutoLayout.baseLeadingPadding),
             titleLabel.topAnchor.constraint(equalTo: topAnchor,
-                                            constant: LayoutConstants.Title.topPadding),
+                                            constant: Constants.AutoLayout.titleTopPadding),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                               constant: -LayoutConstants.Title.bottomPadding)
+                                               constant: -Constants.AutoLayout.titleBottomPadding)
         ])
     }
     
     private func activateSubtitleLabelConstraints() {
         NSLayoutConstraint.activate([
             subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                   constant: LayoutConstants.leadingPadding),
+                                                   constant: Constants.AutoLayout.baseLeadingPadding),
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
-                                               constant: LayoutConstants.Subtitle.topPadding),
+                                               constant: Constants.AutoLayout.subtitleTopPadding),
             subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                    constant: -LayoutConstants.Subtitle.trailingPadding),
+                                                    constant: -Constants.AutoLayout.subtitleTrailingPadding),
             subtitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                                  constant: -LayoutConstants.Subtitle.bottomPadding)
+                                                  constant: -Constants.AutoLayout.subtitleBottomPadding)
         ])
+    }
+}
+
+// MARK: - Constants
+
+private extension WeatherView {
+    enum Constants {
+        
+        enum AutoLayout {
+            static let baseLeadingPadding: CGFloat = 11
+            
+            static let titleTopPadding: CGFloat = 10
+            static let titleBottomPadding: CGFloat = 49
+            
+            static let subtitleTopPadding: CGFloat = 5
+            static let subtitleBottomPadding: CGFloat = 13
+            static let subtitleTrailingPadding: CGFloat = 78
+        }
     }
 }
