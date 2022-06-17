@@ -5,4 +5,7 @@
 //  Created by Павел Дубинин on 09.06.2022.
 //
 
-import Foundation
+import UIKit
+
+protocol ProfileViewUiDelegate: AnyObject {
+}
