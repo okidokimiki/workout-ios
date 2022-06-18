@@ -8,11 +8,14 @@
 import UIKit
 
 class RootTabBarController: UITabBarController {
+    // MARK: - Private Properties
+    
+    private let tab = RootTabBar()
+    
     // MARK: - Lifecycle
     
     override func loadView() {
         super.loadView()
-        let tab = RootTabBar()
         setValue(tab, forKey: Constants.Keys.tabBar)
     }
     
