@@ -23,7 +23,7 @@ enum Fonts {
     /// 12pt, Roboto-Medium
     case buttonSmall
     /// 16pt, Roboto-Medium
-    case buttontabBar
+    case buttonTabBar
     
     var value: UIFont? {
         switch self {
@@ -41,7 +41,7 @@ enum Fonts {
             return UIFont.makeRobotoFont(name: .bold, size: .pt16)
         case .buttonSmall:
             return UIFont.makeRobotoFont(name: .medium, size: .pt12)
-        case .buttontabBar:
+        case .buttonTabBar:
             return UIFont.makeRobotoFont(name: .medium, size: .pt16)
         }
     }

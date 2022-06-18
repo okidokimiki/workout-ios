@@ -38,7 +38,7 @@ class RootTabBar: UITabBar {
     }
     
     private func configureAppearance() {
-        guard let tabBarFont = Fonts.buttontabBar.value else { return }
+        guard let tabBarFont = Fonts.buttonTabBar.value else { return }
         let fontAttributes = [NSAttributedString.Key.font: tabBarFont]
         appearance.setTitleTextAttributes(fontAttributes, for: .normal)
     }
