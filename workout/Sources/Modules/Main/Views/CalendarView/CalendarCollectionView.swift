@@ -60,7 +60,7 @@ extension CalendarCollectionView: UICollectionViewDelegate {
 
 extension CalendarCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return Constants.countOfDaysPerWeek
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,13 +74,27 @@ extension CalendarCollectionView: UICollectionViewDataSource {
 
 extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(bounds.width)
-        let cellSize = CGSize(width: bounds.width / 7.5, height: bounds.height)
+        let cellSize = CGSize(width: Constants.cellWidthRatio * bounds.width, height: bounds.height)
         
         return cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 3
+        
+        return 3 // на что влияет?
+    }
+}
+
+// MARK: - Constants
+
+private extension CalendarCollectionView {
+    enum Constants {
+        static let countOfDaysPerWeek = 7
+        static let cellWidthRatio: CGFloat = 1 / 7.5
+        
+        enum AutoLayout {
+            static let basePadding: CGFloat = 5
+            static let leadingPadding: CGFloat = 105
+        }
     }
 }
