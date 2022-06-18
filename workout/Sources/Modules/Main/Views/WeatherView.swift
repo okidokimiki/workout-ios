@@ -82,9 +82,7 @@ class WeatherView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
                                                 constant: Constants.AutoLayout.baseLeadingPadding),
             titleLabel.topAnchor.constraint(equalTo: topAnchor,
-                                            constant: Constants.AutoLayout.titleTopPadding),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                               constant: -Constants.AutoLayout.titleBottomPadding)
+                                            constant: Constants.AutoLayout.titleTopPadding)
         ])
     }
     
@@ -113,7 +111,6 @@ private extension WeatherView {
             static let baseLeadingPadding: CGFloat = 11
             
             static let titleTopPadding: CGFloat = 10
-            static let titleBottomPadding: CGFloat = 49
             
             static let subtitleTopPadding: CGFloat = 5
             static let subtitleBottomPadding: CGFloat = 13
