@@ -47,10 +47,10 @@ class WeatherView: UIView {
     
     static func makeTitleLabel() -> UILabel {
         let label = UILabel()
-        label.numberOfLines = 1
         label.font = Fonts.display3.value
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor(color: .title1)
+        label.numberOfLines = Constants.titleNumberOfLines
         label.text = LocalizableStrings.weatherLabelTitle.localizedString
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -59,10 +59,10 @@ class WeatherView: UIView {
     
     static func makeSubtitleLabel() -> UILabel {
         let label = UILabel()
-        label.numberOfLines = 2
         label.font = Fonts.display5.value
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor(color: .weatherSubtitle)
+        label.numberOfLines = Constants.subtitleNumberOfLines
         label.text = LocalizableStrings.weatherLabelSubtitle.localizedString
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -106,6 +106,8 @@ class WeatherView: UIView {
 
 private extension WeatherView {
     enum Constants {
+        static let titleNumberOfLines: Int = 1
+        static let subtitleNumberOfLines: Int = 2
         
         enum AutoLayout {
             static let baseLeadingPadding: CGFloat = 11
