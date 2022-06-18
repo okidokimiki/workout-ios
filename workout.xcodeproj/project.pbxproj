@@ -158,6 +158,21 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		048EB43E285E4AB300186C9E /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		048EB43F285E4B1E00186C9E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED970E612851F451004A4E06 /* TabBarController.swift */,
+			);
+			sourceTree = "<group>";
+		};
 		04AF4EE2285C935700E5EC74 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +284,7 @@
 				04AF4EF8285CC20500E5EC74 /* Basic */,
 				04FE09FC284E7F7500839CBF /* Main */,
 				04AF4EEF285CBC7300E5EC74 /* NewWorkout */,
+				048EB43E285E4AB300186C9E /* ReusableViews */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
