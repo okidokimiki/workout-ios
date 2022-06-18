@@ -18,6 +18,7 @@
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
 		04117390284E55380058BE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0411738F284E55380058BE9C /* Assets.xcassets */; };
 		04117393284E55380058BE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04117391284E55380058BE9C /* LaunchScreen.storyboard */; };
+		047C154D285E650F00932FF0 /* RootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C154C285E650F00932FF0 /* RootTabBar.swift */; };
 		04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE5285C997B00E5EC74 /* FontName.swift */; };
 		04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE7285C99D900E5EC74 /* FontSize.swift */; };
 		04AF4EF2285CBC7300E5EC74 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */; };
@@ -49,7 +50,7 @@
 		04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0B284E81F700839CBF /* MainViewOutput.swift */; };
 		04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */; };
 		ED801E292851ECD100B22786 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* Tabs.swift */; };
-		ED970E622851F451004A4E06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* TabBarController.swift */; };
+		ED970E622851F451004A4E06 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* RootTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		0411738F284E55380058BE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04117392284E55380058BE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04117394284E55380058BE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047C154C285E650F00932FF0 /* RootTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBar.swift; sourceTree = "<group>"; };
 		04AF4EE5285C997B00E5EC74 /* FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
 		04AF4EE7285C99D900E5EC74 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 		04FE0A0B284E81F700839CBF /* MainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
 		04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUiDelegate.swift; sourceTree = "<group>"; };
 		ED801E282851ECD100B22786 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
-		ED970E612851F451004A4E06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		ED970E612851F451004A4E06 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		047C154E285E651200932FF0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				047C154C285E650F00932FF0 /* RootTabBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		048EB43E285E4AB300186C9E /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,8 +179,9 @@
 		048EB43F285E4B1E00186C9E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED970E612851F451004A4E06 /* TabBarController.swift */,
+				ED970E612851F451004A4E06 /* RootTabBarController.swift */,
 			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		04AF4EE2285C935700E5EC74 /* Controllers */ = {
@@ -215,13 +226,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		04AF4EF8285CC20500E5EC74 /* Basic */ = {
+		04AF4EF8285CC20500E5EC74 /* RootTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				ED970E612851F451004A4E06 /* TabBarController.swift */,
-				04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */,
+				048EB43F285E4B1E00186C9E /* Controllers */,
+				047C154E285E651200932FF0 /* Views */,
 			);
-			path = Basic;
+			path = RootTabBar;
 			sourceTree = "<group>";
 		};
 		04C321C0285B4E3900248965 /* Sources */ = {
@@ -281,9 +292,9 @@
 			isa = PBXGroup;
 			children = (
 				04FE0A02284E80DE00839CBF /* ModuleBuilder.swift */,
-				04AF4EF8285CC20500E5EC74 /* Basic */,
 				04FE09FC284E7F7500839CBF /* Main */,
 				04AF4EEF285CBC7300E5EC74 /* NewWorkout */,
+				04AF4EF8285CC20500E5EC74 /* RootTabBar */,
 				048EB43E285E4AB300186C9E /* ReusableViews */,
 			);
 			path = Modules;
@@ -450,7 +461,8 @@
 				04117387284E55370058BE9C /* AppDelegate.swift in Sources */,
 				04FE0A0C284E81F700839CBF /* MainViewOutput.swift in Sources */,
 				04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */,
-				ED970E622851F451004A4E06 /* TabBarController.swift in Sources */,
+				ED970E622851F451004A4E06 /* RootTabBarController.swift in Sources */,
+				047C154D285E650F00932FF0 /* RootTabBar.swift in Sources */,
 				04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */,
 				040FDFB62852980E00E1B6B7 /* CalendarCollectionView.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
