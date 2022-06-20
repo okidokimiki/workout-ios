@@ -18,13 +18,7 @@ class CalendarCollectionView: UICollectionView {
     
     weak var actionsDelegate: CalendarCollectionViewActionsDelegate?
     weak var dataSourceDelegate: CalendarCollectionViewDataSourceDelegate?
-    
-    // MARK: - Private Properties
-    
-    private enum ReuseId {
-        static let calendarCell = CalendarCollectionViewCell.cellID
-    }
-    
+        
     // MARK: - Initilization
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -42,9 +36,10 @@ class CalendarCollectionView: UICollectionView {
         delegate = self
         dataSource = self
         backgroundColor = .none
+        showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
         translatesAutoresizingMaskIntoConstraints = false
-        register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: ReuseId.calendarCell)
+        register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: Constants.ReuseId.calendarCell)
     }
 }
 
@@ -60,11 +55,14 @@ extension CalendarCollectionView: UICollectionViewDelegate {
 
 extension CalendarCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        let cellsCount = Constants.countOfDaysPerWeek
+        
+        return cellsCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ReuseId.calendarCell, for: indexPath)
+        let reuseIdentifier = Constants.ReuseId.calendarCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         return cell
     }
@@ -74,13 +72,31 @@ extension CalendarCollectionView: UICollectionViewDataSource {
 
 extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        print(bounds.width)
-        let cellSize = CGSize(width: bounds.width / 7.5, height: bounds.height)
+        let cellSize = CGSize(width: Constants.cellWidthRatio * bounds.width, height: bounds.height)
         
         return cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 3
+        
+        return 3 // на что влияет?
+    }
+}
+
+// MARK: - Constants
+
+private extension CalendarCollectionView {
+    enum Constants {
+        static let countOfDaysPerWeek = 7
+        static let cellWidthRatio: CGFloat = 1 / 7.5
+        
+        enum ReuseId {
+            static let calendarCell = CalendarCollectionViewCell.cellID
+        }
+        
+        enum AutoLayout {
+            static let basePadding: CGFloat = 5
+            static let leadingPadding: CGFloat = 105
+        }
     }
 }

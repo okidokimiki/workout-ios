@@ -2,7 +2,7 @@
   "images" : [
     {
       "filename" : "X.svg",
-      "idiom" : "iphone"
+      "idiom" : "universal"
     }
   ],
   "info" : {
@@ -10,6 +10,6 @@
     "version" : 1
   },
   "properties" : {
-    "template-rendering-intent" : "template"
+    "template-rendering-intent" : "original"
   }
 }

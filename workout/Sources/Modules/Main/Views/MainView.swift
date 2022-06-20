@@ -131,8 +131,7 @@ class MainView: UIView {
             userNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
                                                     constant: -Constants.AutoLayout.basePadding),
             userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor,
-                                                  constant: -Constants.AutoLayout.userNameBottomPadding),
-            userNameLabel.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.userNameHeightAnchor)
+                                                  constant: -Constants.AutoLayout.userNameBottomPadding)
         ])
     }
     
@@ -178,7 +177,6 @@ private extension MainView {
             
             static let userNameLeadingPadding: CGFloat = 6
             static let userNameBottomPadding: CGFloat = 7
-            static let userNameHeightAnchor: CGFloat = 28
             
             static let plusTopPadding: CGFloat = 6
             static let plusHeightAnchor: CGFloat = 80

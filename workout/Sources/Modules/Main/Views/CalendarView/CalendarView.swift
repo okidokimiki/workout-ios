@@ -71,6 +71,16 @@ class CalendarView: UIView {
     }
 }
 
+// MARK: - CalendarCollectionViewActionsDelegate
+
+extension CalendarView: CalendarCollectionViewActionsDelegate {
+}
+
+// MARK: - CalendarCollectionViewDataSourceDelegate
+
+extension CalendarView: CalendarCollectionViewDataSourceDelegate {
+}
+
 // MARK: - Constants
 
 private extension CalendarView {
@@ -81,14 +91,4 @@ private extension CalendarView {
             static let leadingPadding: CGFloat = 105
         }
     }
-}
-
-// MARK: - CalendarCollectionViewActionsDelegate
-
-extension CalendarView: CalendarCollectionViewActionsDelegate {
-}
-
-// MARK: - CalendarCollectionViewDataSourceDelegate
-
-extension CalendarView: CalendarCollectionViewDataSourceDelegate {
 }

@@ -16,9 +16,7 @@ enum LocalizableStrings: String {
     case newWorkoutLabelTitle = "newWorkoutLabel.title"
     case weatherLabelSubtitle = "weatherLabel.subtitle"
     case blaBlaBlaTitle = "blaBlaBla.title"
-    
-    // MARK: - localizedString
-    
+        
     var localizedString: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }
