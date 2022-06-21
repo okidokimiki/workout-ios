@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalendarView: UIView {
+final class CalendarView: UIView {
     // MARK: - Private Properties
     
     private lazy var calendarCollectionView: CalendarCollectionView = {

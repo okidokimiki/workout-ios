@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherView: UIView {
+final class WeatherView: UIView {
     // MARK: - Private Properties
     
     private lazy var titleLabel: UILabel = {

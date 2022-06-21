@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewWorkoutView: UIView {
+final class NewWorkoutView: UIView {
     // MARK: - Private Properties
     
     private lazy var titleLabel: UILabel = {

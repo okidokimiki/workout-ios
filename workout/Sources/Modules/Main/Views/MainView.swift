@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainView: UIView {
+final class MainView: UIView {
     // MARK: - Public Properties
     
     weak var uiDelegate: MainViewUiDelegate?

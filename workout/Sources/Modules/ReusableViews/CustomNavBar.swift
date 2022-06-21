@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomNavBar: UINavigationController {
+final class CustomNavBar: UINavigationController {
     // MARK: - Initilization
     
     init(rootVC: UIViewController, title: LocalizableStrings? = nil) {

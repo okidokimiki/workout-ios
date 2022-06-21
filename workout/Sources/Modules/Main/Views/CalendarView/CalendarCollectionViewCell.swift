@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalendarCollectionViewCell: UICollectionViewCell {
+final class CalendarCollectionViewCell: UICollectionViewCell {
     // MARK: - Public Properties
     
     static let cellID = String(describing: CalendarCollectionViewCell.self)

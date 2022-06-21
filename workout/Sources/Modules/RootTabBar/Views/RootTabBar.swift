@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RootTabBar: UITabBar {
+final class RootTabBar: UITabBar {
     // MARK: - Private Properties
     
     private let appearance = UITabBarItem.appearance()

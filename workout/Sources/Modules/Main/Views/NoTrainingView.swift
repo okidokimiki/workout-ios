@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NoTrainingView: UIView {
+final class NoTrainingView: UIView {
     // MARK: - Private Properties
     
     private lazy var ovalView: UIView = {

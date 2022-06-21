@@ -13,7 +13,7 @@ protocol CalendarCollectionViewActionsDelegate: AnyObject {
 protocol CalendarCollectionViewDataSourceDelegate: AnyObject {
 }
 
-class CalendarCollectionView: UICollectionView {
+final class CalendarCollectionView: UICollectionView {
     // MARK: - Public Properties
     
     weak var actionsDelegate: CalendarCollectionViewActionsDelegate?

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlusButton: UIButton {
+final class PlusButton: UIButton {
     // MARK: - Initilization
         
     override init(frame: CGRect) {
