@@ -35,7 +35,6 @@ class WeatherView: UIView {
     private func configure() {
         makeShadowUnderView()
         backgroundColor = UIColor(color: .weatherBackground)
-        translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func addSubviews() {
@@ -45,6 +44,11 @@ class WeatherView: UIView {
     
     // MARK: - Creating Subviews
     
+    override func addSubview(_ view: UIView) {
+        super.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     static func makeTitleLabel() -> UILabel {
         let label = UILabel()
         label.font = Fonts.display3.value
@@ -52,7 +56,6 @@ class WeatherView: UIView {
         label.textColor = UIColor(color: .title1)
         label.numberOfLines = Constants.titleNumberOfLines
         label.text = LocalizableStrings.weatherLabelTitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }
@@ -64,7 +67,6 @@ class WeatherView: UIView {
         label.textColor = UIColor(color: .weatherSubtitle)
         label.numberOfLines = Constants.subtitleNumberOfLines
         label.text = LocalizableStrings.weatherLabelSubtitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }

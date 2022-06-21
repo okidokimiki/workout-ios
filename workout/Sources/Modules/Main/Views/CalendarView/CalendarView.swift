@@ -30,7 +30,6 @@ class CalendarView: UIView {
     
     private func configure() {
         backgroundColor = UIColor(color: .accent1)
-        translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func addSubviews() {
@@ -38,6 +37,11 @@ class CalendarView: UIView {
     }
     
     // MARK: - Creating Subviews
+    
+    override func addSubview(_ view: UIView) {
+        super.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
     
     static func makeCalendarCollectionView(_ actionsDelegate: CalendarCollectionViewActionsDelegate, _ dataSourceDelegate: CalendarCollectionViewDataSourceDelegate) -> CalendarCollectionView {
         let layout = UICollectionViewFlowLayout()

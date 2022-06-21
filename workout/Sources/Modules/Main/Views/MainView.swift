@@ -72,12 +72,16 @@ class MainView: UIView {
     
     // MARK: - Creating Subviews
     
+    override func addSubview(_ view: UIView) {
+        super.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     static func makeUserPhotoImageView() -> UIImageView {
         let imageView = UIImageView()
         imageView.layer.borderWidth = Constants.Layer.userPhotoBorderWidth
         imageView.layer.borderColor = UIColor(color: .profileBorder)?.cgColor
         imageView.backgroundColor = UIColor(color: .profileBackground)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
     }
@@ -88,7 +92,6 @@ class MainView: UIView {
         label.lineBreakMode = .byTruncatingTail
         label.textColor = UIColor(color: .title1)
         label.text = LocalizableStrings.blaBlaBlaTitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }
@@ -98,7 +101,6 @@ class MainView: UIView {
         label.font = Fonts.display4.value
         label.textColor = UIColor(color: .subtitle)
         label.text = LocalizableStrings.workoutTodayLabelSubtitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }

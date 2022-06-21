@@ -26,7 +26,6 @@ class CloseButton: UIButton {
         imageView?.tintColor = UIColor(color: .accent1)
         layer.borderWidth = Constants.Layer.borderWidth
         backgroundColor = UIColor(color: .accent3)
-        translatesAutoresizingMaskIntoConstraints = false
     }
 }
 

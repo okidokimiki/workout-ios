@@ -41,7 +41,6 @@ class PlusButton: UIButton {
         // base
         makeShadowUnderView()
         backgroundColor = UIColor(color: .accent2)
-        translatesAutoresizingMaskIntoConstraints = false
         addTarget(self, action: #selector(plusButtonDidTapped), for: .touchUpInside)
     }
 }

@@ -42,6 +42,11 @@ class NewWorkoutView: UIView {
     }
     
     // MARK: - Creating Subviews
+    
+    override func addSubview(_ view: UIView) {
+        super.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
 
     static func makeNewWorkoutLabel() -> UILabel {
         let label = UILabel()
@@ -49,7 +54,6 @@ class NewWorkoutView: UIView {
         label.lineBreakMode = .byTruncatingTail
         label.textColor = UIColor(color: .title1)
         label.text = LocalizableStrings.newWorkoutLabelTitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }

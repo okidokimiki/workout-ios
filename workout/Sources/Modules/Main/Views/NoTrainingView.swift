@@ -54,10 +54,14 @@ class NoTrainingView: UIView {
     
     // MARK: - Creating Subviews
     
+    override func addSubview(_ view: UIView) {
+        super.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     static func makeOvalView() -> UIView {
         let view = UIView()
         view.backgroundColor = UIColor(color: .accent1)
-        view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
     }
@@ -66,7 +70,6 @@ class NoTrainingView: UIView {
         let imageView = UIImageView()
         imageView.image = UIImage(image: .athletes)
         imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
         
         return imageView
     }
@@ -78,7 +81,6 @@ class NoTrainingView: UIView {
         label.textColor = UIColor(color: .title1)
         label.numberOfLines = Constants.titleNumberOfLines
         label.text = LocalizableStrings.noTrainingLabelTitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }
@@ -88,7 +90,6 @@ class NoTrainingView: UIView {
         label.font = Fonts.display3.value
         label.textColor = UIColor(color: .title1)
         label.text = LocalizableStrings.noTrainingLabelSubtitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }

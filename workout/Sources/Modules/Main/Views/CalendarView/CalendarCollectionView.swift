@@ -38,7 +38,6 @@ class CalendarCollectionView: UICollectionView {
         backgroundColor = .none
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
-        translatesAutoresizingMaskIntoConstraints = false
         register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: Constants.ReuseId.calendarCell)
     }
 }
