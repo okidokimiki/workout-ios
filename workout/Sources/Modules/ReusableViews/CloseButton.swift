@@ -1,5 +1,5 @@
 //
-//  closeButton.swift
+//  CloseButton.swift
 //  workout
 //
 //  Created by Александр Воробей on 11.06.2022.
