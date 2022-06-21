@@ -17,21 +17,26 @@ extension UIColor {
     // MARK: - Assets Color
     
     enum Color: String, CaseIterable {
+        // Accent
         case accent1
         case accent2
         case accent3
         case accent4
         case background
-        case profileBackground
-        case profileBorder
+        // TabBar
+        case tabBarBackground
+        case tabBarSeparator
+        case tabBarInactive
+        case tabBarActive
+        // Title
         case subtitle
-        case backgroundTabBar
-        case borderTabBar
-        case activeTabBar
-        case inactiveTabBar
         case title1
         case title2
         case title3
+        // Profile
+        case profileBackground
+        case profileBorder
+        // Weather
         case weatherBackground
         case weatherSubtitle
     }
