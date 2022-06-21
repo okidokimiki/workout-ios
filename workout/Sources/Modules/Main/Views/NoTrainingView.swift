@@ -149,14 +149,14 @@ private extension NoTrainingView {
     }
     
     enum Constants {
+        static let titleNumberOfLines: Int = 1
         static let ovalHeightRatio: CGFloat = 1 / 1.4
         static let athletesHeightRatio: CGFloat = 1 / 1.85
-        static let titleNumberOfLines: Int = 1
         
         enum AutoLayout {
             static let athletesTopPadding: CGFloat = 70
-            static let athletesHeightAnchor: CGFloat = 230
             static let athletesWidthAnchor: CGFloat = 145
+            static let athletesHeightAnchor: CGFloat = 230
         }
     }
 }
