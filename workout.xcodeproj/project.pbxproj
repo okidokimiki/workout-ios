@@ -16,9 +16,10 @@
 		04117387284E55370058BE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117386284E55370058BE9C /* AppDelegate.swift */; };
 		04117389284E55370058BE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117388284E55370058BE9C /* SceneDelegate.swift */; };
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
-		04117390284E55380058BE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0411738F284E55380058BE9C /* Assets.xcassets */; };
+		04117390284E55380058BE9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0411738F284E55380058BE9C /* Colors.xcassets */; };
 		04117393284E55380058BE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04117391284E55380058BE9C /* LaunchScreen.storyboard */; };
 		04163FBE28621FD3008BACC7 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04163FBD28621FD3008BACC7 /* CustomNavBar.swift */; };
+		04163FC528622D1E008BACC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04163FC428622D1E008BACC7 /* Images.xcassets */; };
 		047C154D285E650F00932FF0 /* RootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C154C285E650F00932FF0 /* RootTabBar.swift */; };
 		047C1550285E824600932FF0 /* NoTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C154F285E824600932FF0 /* NoTrainingView.swift */; };
 		04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE5285C997B00E5EC74 /* FontName.swift */; };
@@ -66,10 +67,11 @@
 		04117386284E55370058BE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04117388284E55370058BE9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0411738A284E55370058BE9C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0411738F284E55380058BE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0411738F284E55380058BE9C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		04117392284E55380058BE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04117394284E55380058BE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04163FBD28621FD3008BACC7 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		04163FC428622D1E008BACC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		047C154C285E650F00932FF0 /* RootTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBar.swift; sourceTree = "<group>"; };
 		047C154F285E824600932FF0 /* NoTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTrainingView.swift; sourceTree = "<group>"; };
 		04AF4EE5285C997B00E5EC74 /* FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
@@ -254,7 +256,8 @@
 		04C321C1285B4E5700248965 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0411738F284E55380058BE9C /* Assets.xcassets */,
+				04163FC428622D1E008BACC7 /* Images.xcassets */,
+				0411738F284E55380058BE9C /* Colors.xcassets */,
 				04117391284E55380058BE9C /* LaunchScreen.storyboard */,
 				04F6B6592852014500C7A4F9 /* Localizable.strings */,
 				04F6B67C2852179A00C7A4F9 /* Fonts */,
@@ -419,8 +422,9 @@
 				04F6B6572852014500C7A4F9 /* Localizable.strings in Resources */,
 				04F6B6712852154D00C7A4F9 /* Roboto-Black.ttf in Resources */,
 				04F6B6732852154D00C7A4F9 /* Roboto-LightItalic.ttf in Resources */,
+				04163FC528622D1E008BACC7 /* Images.xcassets in Resources */,
 				04F6B66F2852154D00C7A4F9 /* Roboto-Thin.ttf in Resources */,
-				04117390284E55380058BE9C /* Assets.xcassets in Resources */,
+				04117390284E55380058BE9C /* Colors.xcassets in Resources */,
 				04F6B6792852154D00C7A4F9 /* Roboto-Regular.ttf in Resources */,
 				04F6B6722852154D00C7A4F9 /* Roboto-BlackItalic.ttf in Resources */,
 				04F6B6772852154D00C7A4F9 /* Roboto-ThinItalic.ttf in Resources */,
