@@ -1,5 +1,5 @@
 //
-//  CalendarView.swift
+//  WeekView.swift
 //  workout
 //
 //  Created by Mikhail Chaus on 09.06.2022.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-final class CalendarView: UIView {
+final class WeekView: UIView {
     // MARK: - Private Properties
     
-    private lazy var calendarCollectionView: CalendarCollectionView = {
-        return CalendarView.makeCalendarCollectionView(self, self)
+    private lazy var weekDaysCollectionView: WeekDaysCollectionView = {
+        return WeekView.makeWeekDaysCollectionView(self, self)
     }()
     
     // MARK: - Initilization
@@ -33,7 +33,7 @@ final class CalendarView: UIView {
     }
     
     private func addSubviews() {
-        addSubview(calendarCollectionView)
+        addSubview(weekDaysCollectionView)
     }
     
     // MARK: - Creating Subviews
@@ -43,11 +43,11 @@ final class CalendarView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    static func makeCalendarCollectionView(_ actionsDelegate: CalendarCollectionViewActionsDelegate, _ dataSourceDelegate: CalendarCollectionViewDataSourceDelegate) -> CalendarCollectionView {
+    static func makeWeekDaysCollectionView(_ actionsDelegate: WeekDaysCollectionViewActionsDelegate, _ dataSourceDelegate: WeekDaysCollectionViewDataSourceDelegate) -> WeekDaysCollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         
-        let collectionView = CalendarCollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = WeekDaysCollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.actionsDelegate = actionsDelegate
         collectionView.dataSourceDelegate = dataSourceDelegate
         
@@ -58,36 +58,36 @@ final class CalendarView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        activateCalendarCollectionViewConstraints()
+        activateWeekDaysCollectionViewConstraints()
     }
     
-    private func activateCalendarCollectionViewConstraints() {
+    private func activateWeekDaysCollectionViewConstraints() {
         NSLayoutConstraint.activate([
-            calendarCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor,
+            weekDaysCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor,
                                                             constant: Constants.AutoLayout.leadingPadding),
-            calendarCollectionView.topAnchor.constraint(equalTo: topAnchor,
+            weekDaysCollectionView.topAnchor.constraint(equalTo: topAnchor,
                                                         constant: Constants.AutoLayout.basePadding),
-            calendarCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor,
+            weekDaysCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor,
                                                              constant: -Constants.AutoLayout.basePadding),
-            calendarCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor,
+            weekDaysCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor,
                                                            constant: -Constants.AutoLayout.basePadding)
         ])
     }
 }
 
-// MARK: - CalendarCollectionViewActionsDelegate
+// MARK: - WeekDaysCollectionViewActionsDelegate
 
-extension CalendarView: CalendarCollectionViewActionsDelegate {
+extension WeekView: WeekDaysCollectionViewActionsDelegate {
 }
 
-// MARK: - CalendarCollectionViewDataSourceDelegate
+// MARK: - WeekDaysCollectionViewDataSourceDelegate
 
-extension CalendarView: CalendarCollectionViewDataSourceDelegate {
+extension WeekView: WeekDaysCollectionViewDataSourceDelegate {
 }
 
 // MARK: - Constants
 
-private extension CalendarView {
+private extension WeekView {
     enum Constants {
         
         enum AutoLayout {

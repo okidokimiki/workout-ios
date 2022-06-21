@@ -18,8 +18,8 @@ final class MainView: UIView {
         return MainView.makeUserPhotoImageView()
     }()
     
-    private lazy var calendarView: CalendarView = {
-        return CalendarView()
+    private lazy var weekView: WeekView = {
+        return WeekView()
     }()
     
     private lazy var userNameLabel: UILabel = {
@@ -61,7 +61,7 @@ final class MainView: UIView {
     }
     
     private func addSubviews() {
-        addSubview(calendarView)
+        addSubview(weekView)
         addSubview(userPhotoImageView)
         addSubview(userNameLabel)
         addSubview(plusButton)
@@ -109,8 +109,8 @@ final class MainView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        calendarView.roundOffWithRadius(Constants.Layer.baseCornerRadius)
-        activateCalendarViewConstraints()
+        weekView.roundOffWithRadius(Constants.Layer.baseCornerRadius)
+        activateWeekViewConstraints()
         
         userPhotoImageView.roundOffWithRadius(Constants.AutoLayout.userPhotoHeightAnchor / 2)
         activateUserPhotoImageViewConstraints()
@@ -128,15 +128,15 @@ final class MainView: UIView {
         activateNoTrainingViewConstraints()
     }
     
-    private func activateCalendarViewConstraints() {
+    private func activateWeekViewConstraints() {
         NSLayoutConstraint.activate([
-            calendarView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
+            weekView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
                                                   constant: Constants.AutoLayout.basePadding),
-            calendarView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
+            weekView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
                                                    constant: -Constants.AutoLayout.basePadding),
-            calendarView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,
+            weekView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,
                                               constant: Constants.AutoLayout.userPhotoHeightAnchor / 2),
-            calendarView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.calendarHeightAnchor)
+            weekView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.weekHeightAnchor)
         ])
     }
     
@@ -156,7 +156,7 @@ final class MainView: UIView {
                                                    constant: Constants.AutoLayout.userNameLeadingPadding),
             userNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
                                                     constant: -Constants.AutoLayout.basePadding),
-            userNameLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor,
+            userNameLabel.bottomAnchor.constraint(equalTo: weekView.topAnchor,
                                                   constant: -Constants.AutoLayout.userNameBottomPadding)
         ])
     }
@@ -165,7 +165,7 @@ final class MainView: UIView {
         NSLayoutConstraint.activate([
             plusButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
                                                 constant: Constants.AutoLayout.basePadding),
-            plusButton.topAnchor.constraint(equalTo: calendarView.bottomAnchor,
+            plusButton.topAnchor.constraint(equalTo: weekView.bottomAnchor,
                                             constant: Constants.AutoLayout.plusTopPadding),
             plusButton.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightAnchor),
             plusButton.widthAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightAnchor)
@@ -176,7 +176,7 @@ final class MainView: UIView {
         NSLayoutConstraint.activate([
             weatherView.leadingAnchor.constraint(equalTo: plusButton.trailingAnchor,
                                                 constant: Constants.AutoLayout.basePadding),
-            weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor,
+            weatherView.topAnchor.constraint(equalTo: weekView.bottomAnchor,
                                              constant: Constants.AutoLayout.weatherTopPadding),
             weatherView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
                                                   constant: -Constants.AutoLayout.basePadding)
@@ -228,7 +228,7 @@ private extension MainView {
         enum AutoLayout {
             static let basePadding: CGFloat = 13
             
-            static let calendarHeightAnchor: CGFloat = 69
+            static let weekHeightAnchor: CGFloat = 69
             
             static let userPhotoHeightAnchor: CGFloat = 100
             

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAA28526B8100E1B6B7 /* CalendarView.swift */; };
+		040FDFAB28526B8100E1B6B7 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAA28526B8100E1B6B7 /* WeekView.swift */; };
 		040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFAE285274A800E1B6B7 /* PlusButton.swift */; };
 		040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB0285289EB00E1B6B7 /* WeatherView.swift */; };
 		040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */; };
-		040FDFB62852980E00E1B6B7 /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB52852980E00E1B6B7 /* CalendarCollectionView.swift */; };
-		040FDFB82852983800E1B6B7 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB72852983800E1B6B7 /* CalendarCollectionViewCell.swift */; };
+		040FDFB62852980E00E1B6B7 /* WeekDaysCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB52852980E00E1B6B7 /* WeekDaysCollectionView.swift */; };
+		040FDFB82852983800E1B6B7 /* WeekDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FDFB72852983800E1B6B7 /* WeekDayCollectionViewCell.swift */; };
 		04117387284E55370058BE9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117386284E55370058BE9C /* AppDelegate.swift */; };
 		04117389284E55370058BE9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04117388284E55370058BE9C /* SceneDelegate.swift */; };
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
@@ -57,12 +57,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040FDFAA28526B8100E1B6B7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		040FDFAA28526B8100E1B6B7 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		040FDFAE285274A800E1B6B7 /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 		040FDFB0285289EB00E1B6B7 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		040FDFB328528F2C00E1B6B7 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
-		040FDFB52852980E00E1B6B7 /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
-		040FDFB72852983800E1B6B7 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		040FDFB52852980E00E1B6B7 /* WeekDaysCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDaysCollectionView.swift; sourceTree = "<group>"; };
+		040FDFB72852983800E1B6B7 /* WeekDayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayCollectionViewCell.swift; sourceTree = "<group>"; };
 		04117383284E55370058BE9C /* workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04117386284E55370058BE9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04117388284E55370058BE9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,16 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		040FDFAC28526B8400E1B6B7 /* CalendarView */ = {
-			isa = PBXGroup;
-			children = (
-				040FDFAA28526B8100E1B6B7 /* CalendarView.swift */,
-				040FDFB52852980E00E1B6B7 /* CalendarCollectionView.swift */,
-				040FDFB72852983800E1B6B7 /* CalendarCollectionViewCell.swift */,
-			);
-			path = CalendarView;
-			sourceTree = "<group>";
-		};
 		0411737A284E55370058BE9C = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +154,17 @@
 				04117388284E55370058BE9C /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		043F99CA28627348005D6BDB /* WeekView */ = {
+			isa = PBXGroup;
+			children = (
+				040FDFAA28526B8100E1B6B7 /* WeekView.swift */,
+				040FDFB52852980E00E1B6B7 /* WeekDaysCollectionView.swift */,
+				040FDFB72852983800E1B6B7 /* WeekDayCollectionViewCell.swift */,
+			);
+			name = WeekView;
+			path = CalendarView/WeekView;
 			sourceTree = "<group>";
 		};
 		047C154E285E651200932FF0 /* Views */ = {
@@ -316,7 +317,7 @@
 				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
 				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
 				047C154F285E824600932FF0 /* NoTrainingView.swift */,
-				040FDFAC28526B8400E1B6B7 /* CalendarView */,
+				043F99CA28627348005D6BDB /* WeekView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -475,7 +476,7 @@
 				ED970E622851F451004A4E06 /* RootTabBarController.swift in Sources */,
 				047C154D285E650F00932FF0 /* RootTabBar.swift in Sources */,
 				04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */,
-				040FDFB62852980E00E1B6B7 /* CalendarCollectionView.swift in Sources */,
+				040FDFB62852980E00E1B6B7 /* WeekDaysCollectionView.swift in Sources */,
 				047C1550285E824600932FF0 /* NoTrainingView.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
 				040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */,
@@ -484,8 +485,8 @@
 				04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
 				040FDFB1285289EB00E1B6B7 /* WeatherView.swift in Sources */,
-				040FDFAB28526B8100E1B6B7 /* CalendarView.swift in Sources */,
-				040FDFB82852983800E1B6B7 /* CalendarCollectionViewCell.swift in Sources */,
+				040FDFAB28526B8100E1B6B7 /* WeekView.swift in Sources */,
+				040FDFB82852983800E1B6B7 /* WeekDayCollectionViewCell.swift in Sources */,
 				04AF4EF5285CBD1700E5EC74 /* CloseButton.swift in Sources */,
 				ED801E292851ECD100B22786 /* Tabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
