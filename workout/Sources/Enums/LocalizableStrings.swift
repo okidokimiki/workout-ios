@@ -18,6 +18,8 @@ enum LocalizableStrings: String {
     case weatherLabelTitle = "weatherLabel.title"
     case newWorkoutLabelTitle = "newWorkoutLabel.title"
     case weatherLabelSubtitle = "weatherLabel.subtitle"
+    case startWorkoutLabelTitle = "startWorkoutLabel.title"
+    case editingProfileLabelTitle = "editingProfileLabel.title"
     case blaBlaBlaTitle = "blaBlaBla.title"
         
     var localizedString: String {

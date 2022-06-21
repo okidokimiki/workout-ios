@@ -74,7 +74,7 @@ class NoTrainingView: UIView {
         label.adjustsFontSizeToFitWidth = true
         label.textColor = UIColor(color: .title1)
         label.numberOfLines = Constants.titleNumberOfLines
-        label.text = LocalizableStrings.noTrainingLabelTitle.localizedString
+        label.text = LocalizableStrings.noTrainingLabelTitle.localizedString.uppercased()
         
         return label
     }
