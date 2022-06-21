@@ -142,9 +142,8 @@ private extension NoTrainingView {
         static let athletesHeightRatio: CGFloat = 1 / 1.85
         
         enum AutoLayout {
-            static let athletesTopPadding: CGFloat = 70
-            static let athletesWidthAnchor: CGFloat = 145
-            static let athletesHeightAnchor: CGFloat = 230
+            static let athletesTopOffset: CGFloat = 70
+            static let athletesHeightValue: CGFloat = 230
         }
     }
 }

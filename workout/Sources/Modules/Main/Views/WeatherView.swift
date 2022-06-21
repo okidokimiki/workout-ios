@@ -77,22 +77,22 @@ final class WeatherView: UIView {
     private func activateTitleLabelConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                constant: Constants.AutoLayout.baseLeadingPadding),
+                                                constant: Constants.AutoLayout.baseLeadingOffset),
             titleLabel.topAnchor.constraint(equalTo: topAnchor,
-                                            constant: Constants.AutoLayout.titleTopPadding)
+                                            constant: Constants.AutoLayout.titleTopOffset)
         ])
     }
     
     private func activateSubtitleLabelConstraints() {
         NSLayoutConstraint.activate([
             subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                   constant: Constants.AutoLayout.baseLeadingPadding),
+                                                   constant: Constants.AutoLayout.baseLeadingOffset),
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
-                                               constant: Constants.AutoLayout.subtitleTopPadding),
+                                               constant: Constants.AutoLayout.subtitleTopOffset),
             subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                    constant: -Constants.AutoLayout.subtitleTrailingPadding),
+                                                    constant: -Constants.AutoLayout.subtitleTrailingOffset),
             subtitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                                  constant: -Constants.AutoLayout.subtitleBottomPadding)
+                                                  constant: -Constants.AutoLayout.subtitleBottomOffset)
         ])
     }
 }
@@ -105,13 +105,13 @@ private extension WeatherView {
         static let subtitleNumberOfLines: Int = 2
         
         enum AutoLayout {
-            static let baseLeadingPadding: CGFloat = 11
+            static let baseLeadingOffset: CGFloat = 11
             
-            static let titleTopPadding: CGFloat = 10
+            static let titleTopOffset: CGFloat = 10
             
-            static let subtitleTopPadding: CGFloat = 5
-            static let subtitleBottomPadding: CGFloat = 13
-            static let subtitleTrailingPadding: CGFloat = 78
+            static let subtitleTopOffset: CGFloat = 5
+            static let subtitleBottomOffset: CGFloat = 13
+            static let subtitleTrailingOffset: CGFloat = 78
         }
     }
 }

@@ -59,13 +59,13 @@ final class WeekView: UIView {
     private func activateWeekDaysCollectionViewConstraints() {
         NSLayoutConstraint.activate([
             weekDaysCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                            constant: Constants.AutoLayout.leadingPadding),
+                                                            constant: Constants.AutoLayout.leadingOffset),
             weekDaysCollectionView.topAnchor.constraint(equalTo: topAnchor,
-                                                        constant: Constants.AutoLayout.basePadding),
+                                                        constant: Constants.AutoLayout.baseOffset),
             weekDaysCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                             constant: -Constants.AutoLayout.basePadding),
+                                                             constant: -Constants.AutoLayout.baseOffset),
             weekDaysCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                                           constant: -Constants.AutoLayout.basePadding)
+                                                           constant: -Constants.AutoLayout.baseOffset)
         ])
     }
 }
@@ -86,8 +86,8 @@ private extension WeekView {
     enum Constants {
         
         enum AutoLayout {
-            static let basePadding: CGFloat = 5
-            static let leadingPadding: CGFloat = 105
+            static let baseOffset: CGFloat = 5
+            static let leadingOffset: CGFloat = 105
         }
     }
 }

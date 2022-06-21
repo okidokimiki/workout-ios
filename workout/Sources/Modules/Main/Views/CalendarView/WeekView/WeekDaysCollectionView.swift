@@ -94,8 +94,8 @@ private extension WeekDaysCollectionView {
         }
         
         enum AutoLayout {
-            static let basePadding: CGFloat = 5
-            static let leadingPadding: CGFloat = 105
+            static let baseOffset: CGFloat = 5
+            static let leadingOffset: CGFloat = 105
         }
     }
 }

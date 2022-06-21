@@ -107,7 +107,7 @@ final class MainView: UIView {
         weekView.roundOffWithRadius(Constants.Layer.baseCornerRadius)
         activateWeekViewConstraints()
         
-        userPhotoImageView.roundOffWithRadius(Constants.AutoLayout.userPhotoHeightAnchor / 2)
+        userPhotoImageView.roundOffWithRadius(Constants.AutoLayout.userPhotoHeightValue / 2)
         activateUserPhotoImageViewConstraints()
         
         activateUserNameLabelConstraints()
@@ -126,72 +126,72 @@ final class MainView: UIView {
     private func activateWeekViewConstraints() {
         NSLayoutConstraint.activate([
             weekView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
-                                                  constant: Constants.AutoLayout.basePadding),
+                                                  constant: Constants.AutoLayout.baseOffset),
             weekView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
-                                                   constant: -Constants.AutoLayout.basePadding),
+                                                   constant: -Constants.AutoLayout.baseOffset),
             weekView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,
-                                              constant: Constants.AutoLayout.userPhotoHeightAnchor / 2),
-            weekView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.weekHeightAnchor)
+                                              constant: Constants.AutoLayout.userPhotoHeightValue / 2),
+            weekView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.weekHeightValue)
         ])
     }
     
     private func activateUserPhotoImageViewConstraints() {
         NSLayoutConstraint.activate([
             userPhotoImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
-                                                        constant: Constants.AutoLayout.basePadding),
+                                                        constant: Constants.AutoLayout.baseOffset),
             userPhotoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            userPhotoImageView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.userPhotoHeightAnchor),
-            userPhotoImageView.widthAnchor.constraint(equalToConstant: Constants.AutoLayout.userPhotoHeightAnchor)
+            userPhotoImageView.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.userPhotoHeightValue),
+            userPhotoImageView.widthAnchor.constraint(equalToConstant: Constants.AutoLayout.userPhotoHeightValue)
         ])
     }
     
     private func activateUserNameLabelConstraints() {
         NSLayoutConstraint.activate([
             userNameLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor,
-                                                   constant: Constants.AutoLayout.userNameLeadingPadding),
+                                                   constant: Constants.AutoLayout.userNameLeadingOffset),
             userNameLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
-                                                    constant: -Constants.AutoLayout.basePadding),
+                                                    constant: -Constants.AutoLayout.baseOffset),
             userNameLabel.bottomAnchor.constraint(equalTo: weekView.topAnchor,
-                                                  constant: -Constants.AutoLayout.userNameBottomPadding)
+                                                  constant: -Constants.AutoLayout.userNameBottomOffset)
         ])
     }
     
     private func activatePlusButtonConstraints() {
         NSLayoutConstraint.activate([
             plusButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
-                                                constant: Constants.AutoLayout.basePadding),
+                                                constant: Constants.AutoLayout.baseOffset),
             plusButton.topAnchor.constraint(equalTo: weekView.bottomAnchor,
-                                            constant: Constants.AutoLayout.plusTopPadding),
-            plusButton.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightAnchor),
-            plusButton.widthAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightAnchor)
+                                            constant: Constants.AutoLayout.plusTopOffset),
+            plusButton.heightAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightValue),
+            plusButton.widthAnchor.constraint(equalToConstant: Constants.AutoLayout.plusHeightValue)
         ])
     }
     
     private func activateWeatherViewConstraints() {
         NSLayoutConstraint.activate([
             weatherView.leadingAnchor.constraint(equalTo: plusButton.trailingAnchor,
-                                                constant: Constants.AutoLayout.basePadding),
+                                                constant: Constants.AutoLayout.baseOffset),
             weatherView.topAnchor.constraint(equalTo: weekView.bottomAnchor,
-                                             constant: Constants.AutoLayout.weatherTopPadding),
+                                             constant: Constants.AutoLayout.weatherTopOffset),
             weatherView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
-                                                  constant: -Constants.AutoLayout.basePadding)
+                                                  constant: -Constants.AutoLayout.baseOffset)
         ])
     }
     
     private func activateWorkoutTodayLabelConstraints() {
         NSLayoutConstraint.activate([
             workoutTodayLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                       constant: Constants.AutoLayout.basePadding),
+                                                       constant: Constants.AutoLayout.baseOffset),
             workoutTodayLabel.topAnchor.constraint(equalTo: plusButton.bottomAnchor,
-                                                   constant: Constants.AutoLayout.workoutTodayTopPadding),
+                                                   constant: Constants.AutoLayout.workoutTodayTopOffset),
             workoutTodayLabel.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                       constant: -Constants.AutoLayout.basePadding)
+                                                       constant: -Constants.AutoLayout.baseOffset)
         ])
     }
     
     private func activateNoTrainingViewConstraints() {
         var bottomPadding: CGFloat {
-            let const = Constants.AutoLayout.noTrainingBottomPadding
+            let const = Constants.AutoLayout.noTrainingBottomOffset
             let bottomSafeArea = noTrainingView.safeAreaInsets.bottom
             
             return max(bottomSafeArea, const)
@@ -199,11 +199,11 @@ final class MainView: UIView {
         
         NSLayoutConstraint.activate([
             noTrainingView.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                    constant: Constants.AutoLayout.noTrainingLeadingPadding),
+                                                    constant: Constants.AutoLayout.noTrainingLeadingOffset),
             noTrainingView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor,
-                                                constant: Constants.AutoLayout.noTrainingTopPadding),
+                                                constant: Constants.AutoLayout.noTrainingTopOffset),
             noTrainingView.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                     constant: -Constants.AutoLayout.noTrainingTrailingPadding),
+                                                     constant: -Constants.AutoLayout.noTrainingTrailingOffset),
             noTrainingView.bottomAnchor.constraint(greaterThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor,
                                                    constant: -bottomPadding)
         ])
@@ -221,27 +221,27 @@ private extension MainView {
         }
         
         enum AutoLayout {
-            static let basePadding: CGFloat = 13
+            static let baseOffset: CGFloat = 13
             
-            static let weekHeightAnchor: CGFloat = 69
+            static let weekHeightValue: CGFloat = 69
             
-            static let userPhotoHeightAnchor: CGFloat = 100
+            static let userPhotoHeightValue: CGFloat = 100
             
-            static let userNameLeadingPadding: CGFloat = 6
-            static let userNameBottomPadding: CGFloat = 7
+            static let userNameLeadingOffset: CGFloat = 6
+            static let userNameBottomOffset: CGFloat = 7
             
-            static let plusTopPadding: CGFloat = 6
-            static let plusHeightAnchor: CGFloat = 80
+            static let plusTopOffset: CGFloat = 6
+            static let plusHeightValue: CGFloat = 80
             
-            static let weatherLeadingPadding: CGFloat = 10
-            static let weatherTopPadding: CGFloat = 6
+            static let weatherLeadingOffset: CGFloat = 10
+            static let weatherTopOffset: CGFloat = 6
             
-            static let workoutTodayTopPadding: CGFloat = 14
+            static let workoutTodayTopOffset: CGFloat = 14
             
-            static let noTrainingLeadingPadding: CGFloat = 30
-            static let noTrainingTopPadding: CGFloat = 25
-            static let noTrainingTrailingPadding: CGFloat = 30
-            static let noTrainingBottomPadding: CGFloat = 20
+            static let noTrainingLeadingOffset: CGFloat = 30
+            static let noTrainingTopOffset: CGFloat = 25
+            static let noTrainingTrailingOffset: CGFloat = 30
+            static let noTrainingBottomOffset: CGFloat = 20
         }
     }
 }
