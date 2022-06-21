@@ -15,27 +15,35 @@ enum Tabs: CaseIterable {
     // MARK: - title
     
     var title: String {
+        let text: LocalizableStrings
+        
         switch self {
         case .main:
-            return LocalizableStrings.tabBarMainSectionTitle.localizedString
+            text = .tabBarMainSectionTitle
         case .statistics:
-            return LocalizableStrings.tabBarStatisticsSectionTitle.localizedString
+            text = .tabBarStatisticsSectionTitle
         case .profile:
-            return LocalizableStrings.tabBarProfileSectionTitle.localizedString
+            text = .tabBarProfileSectionTitle
         }
+        
+        return text.localizedString
     }
     
     // MARK: - image
     
     var image: UIImage? {
+        let picture: UIImage?
+        
         switch self {
         case .main:
-            return UIImage(image: .main)?.withRenderingMode(.alwaysTemplate)
+            picture = UIImage(image: .main)
         case .statistics:
-            return UIImage(image: .statistic)?.withRenderingMode(.alwaysTemplate)
+            picture = UIImage(image: .statistic)
         case .profile:
-            return UIImage(image: .profile)?.withRenderingMode(.alwaysTemplate)
+            picture = UIImage(image: .profile)
         }
+        
+        return picture?.withRenderingMode(.alwaysTemplate)
     }
     
     // MARK: - viewController
