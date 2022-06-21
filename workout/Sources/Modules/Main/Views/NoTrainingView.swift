@@ -30,7 +30,6 @@ class NoTrainingView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
         addSubviews()
     }
     
@@ -39,11 +38,6 @@ class NoTrainingView: UIView {
     }
     
     // MARK: - Private Methods
-    
-    private func configure() {
-        backgroundColor = .none
-        translatesAutoresizingMaskIntoConstraints = false
-    }
     
     private func addSubviews() {
         addSubview(ovalView)
