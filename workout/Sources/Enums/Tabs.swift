@@ -30,11 +30,11 @@ enum Tabs: CaseIterable {
     var image: UIImage? {
         switch self {
         case .main:
-            return UIImage(image: .main)
+            return UIImage(image: .main)?.withRenderingMode(.alwaysTemplate)
         case .statistics:
-            return UIImage(image: .statistic)
+            return UIImage(image: .statistic)?.withRenderingMode(.alwaysTemplate)
         case .profile:
-            return UIImage(image: .profile)
+            return UIImage(image: .profile)?.withRenderingMode(.alwaysTemplate)
         }
     }
     
