@@ -18,7 +18,7 @@
 		0411738B284E55370058BE9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411738A284E55370058BE9C /* MainViewController.swift */; };
 		04117390284E55380058BE9C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0411738F284E55380058BE9C /* Colors.xcassets */; };
 		04117393284E55380058BE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04117391284E55380058BE9C /* LaunchScreen.storyboard */; };
-		04163FBE28621FD3008BACC7 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04163FBD28621FD3008BACC7 /* NavBar.swift */; };
+		04163FBE28621FD3008BACC7 /* NavBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04163FBD28621FD3008BACC7 /* NavBarController.swift */; };
 		04163FC528622D1E008BACC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04163FC428622D1E008BACC7 /* Images.xcassets */; };
 		047C154D285E650F00932FF0 /* RootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C154C285E650F00932FF0 /* RootTabBar.swift */; };
 		047C1550285E824600932FF0 /* NoTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C154F285E824600932FF0 /* NoTrainingView.swift */; };
@@ -70,7 +70,7 @@
 		0411738F284E55380058BE9C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		04117392284E55380058BE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04117394284E55380058BE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04163FBD28621FD3008BACC7 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		04163FBD28621FD3008BACC7 /* NavBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarController.swift; sourceTree = "<group>"; };
 		04163FC428622D1E008BACC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		047C154C285E650F00932FF0 /* RootTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBar.swift; sourceTree = "<group>"; };
 		047C154F285E824600932FF0 /* NoTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTrainingView.swift; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		048EB43E285E4AB300186C9E /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
-				04163FBD28621FD3008BACC7 /* NavBar.swift */,
+				04163FBD28621FD3008BACC7 /* NavBarController.swift */,
 				04AF4EF4285CBD1700E5EC74 /* CloseButton.swift */,
 			);
 			path = ReusableViews;
@@ -460,7 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F6B67B2852166500C7A4F9 /* Fonts.swift in Sources */,
-				04163FBE28621FD3008BACC7 /* NavBar.swift in Sources */,
+				04163FBE28621FD3008BACC7 /* NavBarController.swift in Sources */,
 				040FDFAF285274A800E1B6B7 /* PlusButton.swift in Sources */,
 				04F6B67E2852342700C7A4F9 /* UIFont + Extension.swift in Sources */,
 				04AF4EF3285CBC7300E5EC74 /* NewWorkoutView.swift in Sources */,
