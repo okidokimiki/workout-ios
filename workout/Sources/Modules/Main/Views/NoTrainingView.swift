@@ -139,12 +139,11 @@ final class NoTrainingView: UIView {
 
 private extension NoTrainingView {
     private var ovalViewHeightValue: CGFloat {
-        return Constants.ovalHeightRatio * bounds.height
+        return Constants.athletesHeightRatio * bounds.height
     }
     
     enum Constants {
         static let titleNumberOfLines: Int = 1
-        static let ovalHeightRatio: CGFloat = 1 / 1.4
         static let athletesHeightRatio: CGFloat = 1 / 1.85
         
         enum AutoLayout {

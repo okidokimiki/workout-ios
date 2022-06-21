@@ -13,7 +13,7 @@
 "workoutTodayLabel.subtitle" = "Тренировка на сегодня";
 
 "noTrainingLabel.title" = "Тренировка отсутствует";
-"noTrainingLabel.subtitle" = "нажмите на кнопку плюс";
+"noTrainingLabel.subtitle" = "нажмите на кнопку добавить";
 
 "weatherLabel.title" = "Солнечно";
 "weatherLabel.subtitle" = "Хорошая погода, чтобы позаниматься на улице";
