@@ -23,7 +23,7 @@ final class NewWorkoutView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        addSubviews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -36,18 +36,13 @@ final class NewWorkoutView: UIView {
         backgroundColor = UIColor(color: .background)
     }
     
-    private func addSubviews() {
-        addSubview(titleLabel)
-        addSubview(closeButton)
+    private func setupViews() {
+        setupView(titleLabel)
+        setupView(closeButton)
     }
     
     // MARK: - Creating Subviews
     
-    override func addSubview(_ view: UIView) {
-        super.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
-
     static func makeNewWorkoutLabel() -> UILabel {
         let label = UILabel()
         label.font = Fonts.display1.value

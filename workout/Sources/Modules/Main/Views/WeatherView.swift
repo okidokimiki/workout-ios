@@ -23,7 +23,7 @@ final class WeatherView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        addSubviews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -37,17 +37,12 @@ final class WeatherView: UIView {
         backgroundColor = UIColor(color: .weatherBackground)
     }
     
-    private func addSubviews() {
-        addSubview(titleLabel)
-        addSubview(subtitleLabel)
+    private func setupViews() {
+        setupView(titleLabel)
+        setupView(subtitleLabel)
     }
     
     // MARK: - Creating Subviews
-    
-    override func addSubview(_ view: UIView) {
-        super.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
     
     static func makeTitleLabel() -> UILabel {
         let label = UILabel()

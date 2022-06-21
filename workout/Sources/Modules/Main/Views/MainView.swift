@@ -47,7 +47,7 @@ final class MainView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        addSubviews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -60,23 +60,18 @@ final class MainView: UIView {
         backgroundColor = UIColor(color: .background)
     }
     
-    private func addSubviews() {
-        addSubview(weekView)
-        addSubview(userPhotoImageView)
-        addSubview(userNameLabel)
-        addSubview(plusButton)
-        addSubview(weatherView)
-        addSubview(workoutTodayLabel)
-        addSubview(noTrainingView)
+    private func setupViews() {
+        setupView(weekView)
+        setupView(userPhotoImageView)
+        setupView(userNameLabel)
+        setupView(plusButton)
+        setupView(weatherView)
+        setupView(workoutTodayLabel)
+        setupView(noTrainingView)
     }
     
     // MARK: - Creating Subviews
-    
-    override func addSubview(_ view: UIView) {
-        super.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
+        
     static func makeUserPhotoImageView() -> UIImageView {
         let imageView = UIImageView()
         imageView.layer.borderWidth = Constants.Layer.userPhotoBorderWidth

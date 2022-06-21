@@ -19,7 +19,7 @@ final class WeekView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        addSubviews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -32,16 +32,11 @@ final class WeekView: UIView {
         backgroundColor = UIColor(color: .accent1)
     }
     
-    private func addSubviews() {
-        addSubview(weekDaysCollectionView)
+    private func setupViews() {
+        setupView(weekDaysCollectionView)
     }
     
     // MARK: - Creating Subviews
-    
-    override func addSubview(_ view: UIView) {
-        super.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
     
     static func makeWeekDaysCollectionView(_ actionsDelegate: WeekDaysCollectionViewActionsDelegate, _ dataSourceDelegate: WeekDaysCollectionViewDataSourceDelegate) -> WeekDaysCollectionView {
         let layout = UICollectionViewFlowLayout()

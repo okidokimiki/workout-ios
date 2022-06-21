@@ -30,7 +30,7 @@ final class NoTrainingView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubviews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -39,19 +39,14 @@ final class NoTrainingView: UIView {
     
     // MARK: - Private Methods
     
-    private func addSubviews() {
-        addSubview(ovalView)
-        addSubview(athletesImageView)
-        addSubview(titleLabel)
-        addSubview(subtitleLabel)
+    private func setupViews() {
+        setupView(ovalView)
+        setupView(athletesImageView)
+        setupView(titleLabel)
+        setupView(subtitleLabel)
     }
     
     // MARK: - Creating Subviews
-    
-    override func addSubview(_ view: UIView) {
-        super.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
     
     static func makeOvalView() -> UIView {
         let view = UIView()

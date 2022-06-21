@@ -10,6 +10,11 @@ import UIKit
 extension UIView {
     // MARK: - Public Methods
     
+    func setupView(_ view: UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+    }
+    
     func makeShadowUnderView() {
         layer.shadowRadius = 1.0
         layer.shadowOpacity = 0.25
