@@ -34,6 +34,14 @@ class MainView: UIView {
         return WeatherView()
     }()
     
+    private lazy var workoutTodayLabel: UILabel = {
+        return MainView.makeWorkoutTodayLabel()
+    }()
+    
+    private lazy var noTrainingView: NoTrainingView = {
+        return NoTrainingView(frame: .zero)
+    }()
+    
     // MARK: - Initilization
     
     override init(frame: CGRect) {
@@ -58,6 +66,8 @@ class MainView: UIView {
         addSubview(userNameLabel)
         addSubview(plusButton)
         addSubview(weatherView)
+        addSubview(workoutTodayLabel)
+        addSubview(noTrainingView)
     }
     
     // MARK: - Creating Subviews
@@ -83,6 +93,16 @@ class MainView: UIView {
         return label
     }
     
+    static func makeWorkoutTodayLabel() -> UILabel {
+        let label = UILabel()
+        label.font = Fonts.display4.value
+        label.textColor = UIColor(color: .subtitle)
+        label.text = LocalizableStrings.workoutTodayLabelSubtitle.localizedString
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        return label
+    }
+    
     // MARK: - Layout
     
     override func layoutSubviews() {
@@ -100,6 +120,10 @@ class MainView: UIView {
         
         weatherView.roundOffWithRadius(Constants.Layer.baseCornerRadius)
         activateWeatherViewConstraints()
+        
+        activateWorkoutTodayLabelConstraints()
+        
+        activateNoTrainingViewConstraints()
     }
     
     private func activateCalendarViewConstraints() {
@@ -156,6 +180,37 @@ class MainView: UIView {
                                                   constant: -Constants.AutoLayout.basePadding)
         ])
     }
+    
+    private func activateWorkoutTodayLabelConstraints() {
+        NSLayoutConstraint.activate([
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                                       constant: Constants.AutoLayout.basePadding),
+            workoutTodayLabel.topAnchor.constraint(equalTo: plusButton.bottomAnchor,
+                                                   constant: Constants.AutoLayout.workoutTodayTopPadding),
+            workoutTodayLabel.trailingAnchor.constraint(equalTo: trailingAnchor,
+                                                       constant: -Constants.AutoLayout.basePadding)
+        ])
+    }
+    
+    private func activateNoTrainingViewConstraints() {
+        var bottomPadding: CGFloat {
+            let const = Constants.AutoLayout.noTrainingBottomPadding
+            let bottomSafeArea = noTrainingView.safeAreaInsets.bottom
+            
+            return max(bottomSafeArea, const)
+        }
+        
+        NSLayoutConstraint.activate([
+            noTrainingView.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                                    constant: Constants.AutoLayout.noTrainingLeadingPadding),
+            noTrainingView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor,
+                                                constant: Constants.AutoLayout.noTrainingTopPadding),
+            noTrainingView.trailingAnchor.constraint(equalTo: trailingAnchor,
+                                                     constant: -Constants.AutoLayout.noTrainingTrailingPadding),
+            noTrainingView.bottomAnchor.constraint(greaterThanOrEqualTo: safeAreaLayoutGuide.bottomAnchor,
+                                                   constant: -bottomPadding)
+        ])
+    }
 }
 
 // MARK: - Constants
@@ -183,6 +238,13 @@ private extension MainView {
             
             static let weatherLeadingPadding: CGFloat = 10
             static let weatherTopPadding: CGFloat = 6
+            
+            static let workoutTodayTopPadding: CGFloat = 14
+            
+            static let noTrainingLeadingPadding: CGFloat = 30
+            static let noTrainingTopPadding: CGFloat = 25
+            static let noTrainingTrailingPadding: CGFloat = 30
+            static let noTrainingBottomPadding: CGFloat = 20
         }
     }
 }

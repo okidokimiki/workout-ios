@@ -11,6 +11,10 @@
 "tabBarProfileSection.title" = "Профиль";
 
 "plusButton.title" = "Добавить";
+"workoutTodayLabel.subtitle" = "Тренировка на сегодня";
+
+"noTrainingLabel.title" = "ТРЕНИРОВКА ОТСУТСТВУЕТ";
+"noTrainingLabel.subtitle" = "нажмите на кнопку плюс";
 
 "weatherLabel.title" = "Солнечно";
 "weatherLabel.subtitle" = "Хорошая погода, чтобы позаниматься на улице";

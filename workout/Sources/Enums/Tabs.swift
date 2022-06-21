@@ -49,11 +49,11 @@ enum Tabs: CaseIterable {
             view = UINavigationController(rootViewController: viewController)
         case .statistics:
             let viewController = NewWorkoutViewController()
-            viewController.view.backgroundColor = UIColor(color: .accent2)
+            viewController.view.backgroundColor = UIColor(color: .accent2) // del
             view = UINavigationController(rootViewController: viewController)
         case .profile:
             let viewController = UIViewController()
-            viewController.view.backgroundColor = UIColor(color: .accent1)
+            viewController.view.backgroundColor = UIColor(color: .accent1) // del
             view = UINavigationController(rootViewController: viewController)
         }
         view.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)

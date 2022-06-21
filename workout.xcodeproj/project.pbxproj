@@ -19,6 +19,7 @@
 		04117390284E55380058BE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0411738F284E55380058BE9C /* Assets.xcassets */; };
 		04117393284E55380058BE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04117391284E55380058BE9C /* LaunchScreen.storyboard */; };
 		047C154D285E650F00932FF0 /* RootTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C154C285E650F00932FF0 /* RootTabBar.swift */; };
+		047C1550285E824600932FF0 /* NoTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047C154F285E824600932FF0 /* NoTrainingView.swift */; };
 		04AF4EE6285C997B00E5EC74 /* FontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE5285C997B00E5EC74 /* FontName.swift */; };
 		04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EE7285C99D900E5EC74 /* FontSize.swift */; };
 		04AF4EF2285CBC7300E5EC74 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */; };
@@ -68,6 +69,7 @@
 		04117392284E55380058BE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04117394284E55380058BE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047C154C285E650F00932FF0 /* RootTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBar.swift; sourceTree = "<group>"; };
+		047C154F285E824600932FF0 /* NoTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTrainingView.swift; sourceTree = "<group>"; };
 		04AF4EE5285C997B00E5EC74 /* FontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontName.swift; sourceTree = "<group>"; };
 		04AF4EE7285C99D900E5EC74 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		04AF4EF0285CBC7300E5EC74 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				04FE09FD284E7FD600839CBF /* MainView.swift */,
 				040FDFAE285274A800E1B6B7 /* PlusButton.swift */,
 				040FDFB0285289EB00E1B6B7 /* WeatherView.swift */,
+				047C154F285E824600932FF0 /* NoTrainingView.swift */,
 				040FDFAC28526B8400E1B6B7 /* CalendarView */,
 			);
 			path = Views;
@@ -465,6 +468,7 @@
 				047C154D285E650F00932FF0 /* RootTabBar.swift in Sources */,
 				04AF4EE8285C99D900E5EC74 /* FontSize.swift in Sources */,
 				040FDFB62852980E00E1B6B7 /* CalendarCollectionView.swift in Sources */,
+				047C1550285E824600932FF0 /* NoTrainingView.swift in Sources */,
 				04FE09FE284E7FD600839CBF /* MainView.swift in Sources */,
 				040FDFB428528F2C00E1B6B7 /* UIView + Extension.swift in Sources */,
 				04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */,

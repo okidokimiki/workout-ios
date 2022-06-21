@@ -18,6 +18,7 @@ extension UIImage {
     
     enum Icon: String, CaseIterable {
         case main
+        case athletes
         case plus
         case profile
         case statistic

@@ -11,6 +11,10 @@
 "tabBarProfileSection.title" = "Profile";
 
 "plusButton.title" = "Add workout";
+"workoutTodayLabel.subtitle" = "Workout today";
+
+"noTrainingLabel.title" = "NO TRAINING";
+"noTrainingLabel.subtitle" = "press the plus button";
 
 "weatherLabel.title" = "Sunny";
 "weatherLabel.subtitle" = "Nice weather to work out outside";

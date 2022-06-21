@@ -8,6 +8,7 @@
 import UIKit
 
 enum FontSize: CGFloat {
+    case pt36
     case pt24
     case pt20
     case pt18
@@ -18,6 +19,8 @@ enum FontSize: CGFloat {
     
     var value: CGFloat {
         switch self {
+        case .pt36:
+            return 36
         case .pt24:
             return 24
         case .pt20:
