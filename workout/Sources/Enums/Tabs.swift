@@ -46,14 +46,14 @@ enum Tabs: CaseIterable {
         switch self {
         case .main:
             let viewController = MainViewModuleBuilder.createModule()
-            view = CustomNavBar(rootVC: viewController)
+            view = NavBar(rootVC: viewController)
         case .statistics:
             let viewController = NewWorkoutViewController()
-            view = CustomNavBar(rootVC: viewController, title: .tabBarStatisticsSectionTitle)
+            view = NavBar(rootVC: viewController, title: .tabBarStatisticsSectionTitle)
         case .profile:
             let viewController = UIViewController()
             viewController.view.backgroundColor = UIColor(color: .background)
-            view = CustomNavBar(rootVC: viewController, title: .tabBarProfileSectionTitle)
+            view = NavBar(rootVC: viewController, title: .tabBarProfileSectionTitle)
         }
         view.tabBarItem = UITabBarItem(title: title, image: image, selectedImage: nil)
         

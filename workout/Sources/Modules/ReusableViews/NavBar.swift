@@ -1,5 +1,5 @@
 //
-//  CustomNavBar.swift
+//  NavBar.swift
 //  workout
 //
 //  Created by Mikhail Chaus on 21.06.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CustomNavBar: UINavigationController {
+final class NavBar: UINavigationController {
     // MARK: - Initilization
     
     init(rootVC: UIViewController, title: LocalizableStrings? = nil) {
