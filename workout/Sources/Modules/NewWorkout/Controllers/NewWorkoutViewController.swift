@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewWorkoutViewController: UIViewController {
+final class NewWorkoutViewController: UIViewController {
     // MARK: - Lifecycle
     
     override func loadView() {

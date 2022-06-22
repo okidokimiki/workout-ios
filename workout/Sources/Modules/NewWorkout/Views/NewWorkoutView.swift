@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewWorkoutView: UIView {
+final class NewWorkoutView: UIView {
     // MARK: - Private Properties
     
     private lazy var titleLabel: UILabel = {
@@ -23,7 +23,7 @@ class NewWorkoutView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        addSubviews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -36,20 +36,19 @@ class NewWorkoutView: UIView {
         backgroundColor = UIColor(color: .background)
     }
     
-    private func addSubviews() {
-        addSubview(titleLabel)
-        addSubview(closeButton)
+    private func setupViews() {
+        setupView(titleLabel)
+        setupView(closeButton)
     }
     
     // MARK: - Creating Subviews
-
+    
     static func makeNewWorkoutLabel() -> UILabel {
         let label = UILabel()
         label.font = Fonts.display1.value
         label.lineBreakMode = .byTruncatingTail
         label.textColor = UIColor(color: .title1)
         label.text = LocalizableStrings.newWorkoutLabelTitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }

@@ -6,15 +6,32 @@
   
 */
 
+// Main
 "tabBarMainSection.title" = "Main";
-"tabBarStatisticsSection.title" = "Statistics";
-"tabBarProfileSection.title" = "Profile";
 
 "plusButton.title" = "Add workout";
+"workoutTodayLabel.subtitle" = "Workout today";
+
+"noTrainingLabel.title" = "No training";
+"noTrainingLabel.subtitle" = "press the plus button";
 
 "weatherLabel.title" = "Sunny";
 "weatherLabel.subtitle" = "Nice weather to work out outside";
 
-"newWorkoutLabel.title" = "New Workout";
+// New Workout
+"newWorkoutLabel.title" = "New workout";
 
+// Start Workout
+"startWorkoutLabel.title" = "Start Workout";
+
+// Statistics
+"tabBarStatisticsSection.title" = "Statistics";
+
+// Profile
+"tabBarProfileSection.title" = "Profile";
+
+// Editing profile
+"editingProfileLabel.title" = "Editing profile";
+
+// Testing
 "blaBlaBla.title" = "One Two Three Four Five Six Seven Eight Nine Ten";

@@ -1,5 +1,5 @@
 //
-//  closeButton.swift
+//  CloseButton.swift
 //  workout
 //
 //  Created by Александр Воробей on 11.06.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CloseButton: UIButton {
+final class CloseButton: UIButton {
     // MARK: - Initilization
     
     override init(frame: CGRect) {
@@ -26,7 +26,6 @@ class CloseButton: UIButton {
         imageView?.tintColor = UIColor(color: .accent1)
         layer.borderWidth = Constants.Layer.borderWidth
         backgroundColor = UIColor(color: .accent3)
-        translatesAutoresizingMaskIntoConstraints = false
     }
 }
 

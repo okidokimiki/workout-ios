@@ -1,5 +1,5 @@
 //
-//  CalendarCollectionViewCell.swift
+//  WeekDayCollectionViewCell.swift
 //  workout
 //
 //  Created by Mikhail Chaus on 09.06.2022.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-class CalendarCollectionViewCell: UICollectionViewCell {
+final class WeekDayCollectionViewCell: UICollectionViewCell {
     // MARK: - Public Properties
     
-    static let cellID = String(describing: CalendarCollectionViewCell.self)
+    static let cellID = String(describing: WeekDayCollectionViewCell.self)
     
     // MARK: - Initilization
     
@@ -33,7 +33,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
 
 // MARK: - Constants
 
-private extension CalendarCollectionViewCell {
+private extension WeekDayCollectionViewCell {
     enum Constants {
         
         enum Layer {

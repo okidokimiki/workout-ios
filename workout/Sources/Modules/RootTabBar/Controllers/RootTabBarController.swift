@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RootTabBarController: UITabBarController {
+final class RootTabBarController: UITabBarController {
     // MARK: - Private Properties
     
     private let tab = RootTabBar()

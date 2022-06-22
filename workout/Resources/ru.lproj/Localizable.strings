@@ -6,16 +6,32 @@
   
 */
 
+// Main
 "tabBarMainSection.title" = "Главная";
-"tabBarStatisticsSection.title" = "Статистика";
-"tabBarProfileSection.title" = "Профиль";
 
 "plusButton.title" = "Добавить";
+"workoutTodayLabel.subtitle" = "Тренировка на сегодня";
+
+"noTrainingLabel.title" = "Тренировка отсутствует";
+"noTrainingLabel.subtitle" = "нажмите на кнопку добавить";
 
 "weatherLabel.title" = "Солнечно";
 "weatherLabel.subtitle" = "Хорошая погода, чтобы позаниматься на улице";
 
-"newWorkoutLabel.title" = "Новая Тренировка";
+// New Workout
+"newWorkoutLabel.title" = "Новая тренировка";
 
+// Start Workout
+"startWorkoutLabel.title" = "Старт тренировки";
 
+// Statistics
+"tabBarStatisticsSection.title" = "Статистика";
+
+// Profile
+"tabBarProfileSection.title" = "Профиль";
+
+// Editing profile
+"editingProfileLabel.title" = "Изменение профиля";
+
+// Testing
 "blaBlaBla.title" = "Раз Два Три Четыре Пять Шесть Семь Восемь Девять Десять";

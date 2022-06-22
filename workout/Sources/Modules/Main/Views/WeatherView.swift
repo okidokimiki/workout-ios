@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherView: UIView {
+final class WeatherView: UIView {
     // MARK: - Private Properties
     
     private lazy var titleLabel: UILabel = {
@@ -23,7 +23,7 @@ class WeatherView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        addSubviews()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
@@ -35,12 +35,11 @@ class WeatherView: UIView {
     private func configure() {
         makeShadowUnderView()
         backgroundColor = UIColor(color: .weatherBackground)
-        translatesAutoresizingMaskIntoConstraints = false
     }
     
-    private func addSubviews() {
-        addSubview(titleLabel)
-        addSubview(subtitleLabel)
+    private func setupViews() {
+        setupView(titleLabel)
+        setupView(subtitleLabel)
     }
     
     // MARK: - Creating Subviews
@@ -52,7 +51,6 @@ class WeatherView: UIView {
         label.textColor = UIColor(color: .title1)
         label.numberOfLines = Constants.titleNumberOfLines
         label.text = LocalizableStrings.weatherLabelTitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }
@@ -64,7 +62,6 @@ class WeatherView: UIView {
         label.textColor = UIColor(color: .weatherSubtitle)
         label.numberOfLines = Constants.subtitleNumberOfLines
         label.text = LocalizableStrings.weatherLabelSubtitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }
@@ -80,22 +77,22 @@ class WeatherView: UIView {
     private func activateTitleLabelConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                constant: Constants.AutoLayout.baseLeadingPadding),
+                                                constant: Constants.AutoLayout.baseLeadingOffset),
             titleLabel.topAnchor.constraint(equalTo: topAnchor,
-                                            constant: Constants.AutoLayout.titleTopPadding)
+                                            constant: Constants.AutoLayout.titleTopOffset)
         ])
     }
     
     private func activateSubtitleLabelConstraints() {
         NSLayoutConstraint.activate([
             subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                                   constant: Constants.AutoLayout.baseLeadingPadding),
+                                                   constant: Constants.AutoLayout.baseLeadingOffset),
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
-                                               constant: Constants.AutoLayout.subtitleTopPadding),
+                                               constant: Constants.AutoLayout.subtitleTopOffset),
             subtitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                    constant: -Constants.AutoLayout.subtitleTrailingPadding),
+                                                    constant: -Constants.AutoLayout.subtitleTrailingOffset),
             subtitleLabel.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                                  constant: -Constants.AutoLayout.subtitleBottomPadding)
+                                                  constant: -Constants.AutoLayout.subtitleBottomOffset)
         ])
     }
 }
@@ -108,13 +105,13 @@ private extension WeatherView {
         static let subtitleNumberOfLines: Int = 2
         
         enum AutoLayout {
-            static let baseLeadingPadding: CGFloat = 11
+            static let baseLeadingOffset: CGFloat = 11
             
-            static let titleTopPadding: CGFloat = 10
+            static let titleTopOffset: CGFloat = 10
             
-            static let subtitleTopPadding: CGFloat = 5
-            static let subtitleBottomPadding: CGFloat = 13
-            static let subtitleTrailingPadding: CGFloat = 78
+            static let subtitleTopOffset: CGFloat = 5
+            static let subtitleBottomOffset: CGFloat = 13
+            static let subtitleTrailingOffset: CGFloat = 78
         }
     }
 }

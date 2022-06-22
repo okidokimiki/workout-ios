@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RootTabBar: UITabBar {
+final class RootTabBar: UITabBar {
     // MARK: - Private Properties
     
     private let appearance = UITabBarItem.appearance()
@@ -27,14 +27,14 @@ class RootTabBar: UITabBar {
     
     private func configure() {
         // tint
-        tintColor = UIColor(color: .activeTabBar)
-        unselectedItemTintColor = UIColor(color: .inactiveTabBar)
+        tintColor = UIColor(color: .tabBarActive)
+        unselectedItemTintColor = UIColor(color: .tabBarInactive)
         // layer
         layer.borderWidth = Constants.Layer.borderWidth
-        layer.borderColor = UIColor(color: .borderTabBar)?.cgColor
+        layer.borderColor = UIColor(color: .tabBarSeparator)?.cgColor
         // base
         configureAppearance()
-        backgroundColor = UIColor(color: .backgroundTabBar)
+        backgroundColor = UIColor(color: .tabBarBackground)
     }
     
     private func configureAppearance() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlusButton: UIButton {
+final class PlusButton: UIButton {
     // MARK: - Initilization
         
     override init(frame: CGRect) {
@@ -41,7 +41,6 @@ class PlusButton: UIButton {
         // base
         makeShadowUnderView()
         backgroundColor = UIColor(color: .accent2)
-        translatesAutoresizingMaskIntoConstraints = false
         addTarget(self, action: #selector(plusButtonDidTapped), for: .touchUpInside)
     }
 }

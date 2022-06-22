@@ -1,5 +1,5 @@
 //
-//  CalendarCollectionView.swift
+//  WeekDaysCollectionView.swift
 //  workout
 //
 //  Created by Mikhail Chaus on 09.06.2022.
@@ -7,17 +7,17 @@
 
 import UIKit
 
-protocol CalendarCollectionViewActionsDelegate: AnyObject {
+protocol WeekDaysCollectionViewActionsDelegate: AnyObject {
 }
 
-protocol CalendarCollectionViewDataSourceDelegate: AnyObject {
+protocol WeekDaysCollectionViewDataSourceDelegate: AnyObject {
 }
 
-class CalendarCollectionView: UICollectionView {
+final class WeekDaysCollectionView: UICollectionView {
     // MARK: - Public Properties
     
-    weak var actionsDelegate: CalendarCollectionViewActionsDelegate?
-    weak var dataSourceDelegate: CalendarCollectionViewDataSourceDelegate?
+    weak var actionsDelegate: WeekDaysCollectionViewActionsDelegate?
+    weak var dataSourceDelegate: WeekDaysCollectionViewDataSourceDelegate?
         
     // MARK: - Initilization
     
@@ -38,14 +38,13 @@ class CalendarCollectionView: UICollectionView {
         backgroundColor = .none
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
-        translatesAutoresizingMaskIntoConstraints = false
-        register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: Constants.ReuseId.calendarCell)
+        register(WeekDayCollectionViewCell.self, forCellWithReuseIdentifier: Constants.ReuseId.weekDayCell)
     }
 }
 
 // MARK: - UICollectionViewDelegate
 
-extension CalendarCollectionView: UICollectionViewDelegate {
+extension WeekDaysCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
     }
@@ -53,7 +52,7 @@ extension CalendarCollectionView: UICollectionViewDelegate {
 
 // MARK: - UICollectionViewDataSource
 
-extension CalendarCollectionView: UICollectionViewDataSource {
+extension WeekDaysCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let cellsCount = Constants.countOfDaysPerWeek
         
@@ -61,7 +60,7 @@ extension CalendarCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let reuseIdentifier = Constants.ReuseId.calendarCell
+        let reuseIdentifier = Constants.ReuseId.weekDayCell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         return cell
@@ -70,7 +69,7 @@ extension CalendarCollectionView: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
-extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
+extension WeekDaysCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellSize = CGSize(width: Constants.cellWidthRatio * bounds.width, height: bounds.height)
         
@@ -85,18 +84,18 @@ extension CalendarCollectionView: UICollectionViewDelegateFlowLayout {
 
 // MARK: - Constants
 
-private extension CalendarCollectionView {
+private extension WeekDaysCollectionView {
     enum Constants {
         static let countOfDaysPerWeek = 7
         static let cellWidthRatio: CGFloat = 1 / 7.5
         
         enum ReuseId {
-            static let calendarCell = CalendarCollectionViewCell.cellID
+            static let weekDayCell = WeekDayCollectionViewCell.cellID
         }
         
         enum AutoLayout {
-            static let basePadding: CGFloat = 5
-            static let leadingPadding: CGFloat = 105
+            static let baseOffset: CGFloat = 5
+            static let leadingOffset: CGFloat = 105
         }
     }
 }
