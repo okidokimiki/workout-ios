@@ -50,6 +50,8 @@
 		04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */; };
 		ED801E292851ECD100B22786 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED801E282851ECD100B22786 /* Tabs.swift */; };
 		ED970E622851F451004A4E06 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED970E612851F451004A4E06 /* TabBarController.swift */; };
+		EDC6AADB28621EF60058C550 /* PhysicalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6AADA28621EF60058C550 /* PhysicalView.swift */; };
+		EDC6AADE286319A40058C550 /* PhysicalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6AADD286319A40058C550 /* PhysicalCell.swift */; };
 		EDD9C966285CF2200017C195 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C965285CF2200017C195 /* UIStackView+Extension.swift */; };
 		EDD9C975285CF2850017C195 /* ProfileViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C96B285CF2850017C195 /* ProfileViewModuleBuilder.swift */; };
 		EDD9C976285CF2850017C195 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD9C96D285CF2850017C195 /* ProfilePresenter.swift */; };
@@ -108,6 +110,8 @@
 		04FE0A0D284E832100839CBF /* MainViewUiDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUiDelegate.swift; sourceTree = "<group>"; };
 		ED801E282851ECD100B22786 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		ED970E612851F451004A4E06 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EDC6AADA28621EF60058C550 /* PhysicalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalView.swift; sourceTree = "<group>"; };
+		EDC6AADD286319A40058C550 /* PhysicalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalCell.swift; sourceTree = "<group>"; };
 		EDD9C965285CF2200017C195 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStackView+Extension.swift"; path = "workout/Supporting Files/Extensions/UIStackView+Extension.swift"; sourceTree = SOURCE_ROOT; };
 		EDD9C96B285CF2850017C195 /* ProfileViewModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModuleBuilder.swift; sourceTree = "<group>"; };
 		EDD9C96D285CF2850017C195 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
@@ -334,6 +338,14 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
+		EDC6AADC286319910058C550 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EDC6AADD286319A40058C550 /* PhysicalCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		EDD9C969285CF2850017C195 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,8 +377,10 @@
 		EDD9C96E285CF2850017C195 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EDC6AADC286319910058C550 /* Cells */,
 				EDD9C96F285CF2850017C195 /* ProfileView.swift */,
 				EDD9C970285CF2850017C195 /* ProfileViewController.swift */,
+				EDC6AADA28621EF60058C550 /* PhysicalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -510,6 +524,7 @@
 				04F6B6602852134B00C7A4F9 /* UIImage + Extension.swift in Sources */,
 				EDD9C966285CF2200017C195 /* UIStackView+Extension.swift in Sources */,
 				04FE0A03284E80DE00839CBF /* ModuleBuilder.swift in Sources */,
+				EDC6AADE286319A40058C550 /* PhysicalCell.swift in Sources */,
 				04F6B65E2852019300C7A4F9 /* LocalizableStrings.swift in Sources */,
 				04117389284E55370058BE9C /* SceneDelegate.swift in Sources */,
 				EDD9C979285CF2850017C195 /* ProfileViewInput.swift in Sources */,
@@ -522,6 +537,7 @@
 				ED801E292851ECD100B22786 /* Tabs.swift in Sources */,
 				04FE0A0E284E832100839CBF /* MainViewUiDelegate.swift in Sources */,
 				EDD9C977285CF2850017C195 /* ProfileView.swift in Sources */,
+				EDC6AADB28621EF60058C550 /* PhysicalView.swift in Sources */,
 				04FE0A01284E80BE00839CBF /* MainViewModuleBuilder.swift in Sources */,
 				EDD9C97A285CF2850017C195 /* ProfileViewOutput.swift in Sources */,
 			);

@@ -8,10 +8,10 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    
-    //TEST Commit
-    
+        
     var presenter: ProfileViewOutput?
+    
+    var physicalView = PhysicalView()
     
     private let titleLabel: UILabel = {
        let label = UILabel()
@@ -81,6 +81,7 @@ class ProfileViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(greenLabel)
         view.addSubview(profileImage)
+        view.addSubview(physicalView)
         
         labelStackView = UIStackView(arrangedSubviews: [heightLabel, weightLabel],
                                      axis: .horizontal,
@@ -113,6 +114,12 @@ class ProfileViewController: UIViewController {
             labelStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             labelStackView.topAnchor.constraint(equalTo: greenLabel.bottomAnchor, constant: 10),
             labelStackView.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            physicalView.topAnchor.constraint(equalTo: labelStackView.bottomAnchor, constant: 0),
+            physicalView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            physicalView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
         ])
     }
 }
