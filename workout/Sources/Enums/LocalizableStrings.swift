@@ -14,6 +14,9 @@ enum LocalizableStrings: String {
     case plusButtonTitle = "plusButton.title"
     case weatherLabelTitle = "weatherLabel.title"
     case newWorkoutLabelTitle = "newWorkoutLabel.title"
+    case newWorkoutDateAndRepeatLabelSubtitle = "newWorkoutDateAndRepeatLabel.subtitle"
+    case newWorkoutDateLabelText = "newWorkoutDateLabel.text"
+    case newWorkoutRepeatLabelText = "newWorkoutRepeatLabel.text"
     case weatherLabelSubtitle = "weatherLabel.subtitle"
     case blaBlaBlaTitle = "blaBlaBla.title"
         

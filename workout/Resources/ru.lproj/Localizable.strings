@@ -16,6 +16,9 @@
 "weatherLabel.subtitle" = "Хорошая погода, чтобы позаниматься на улице";
 
 "newWorkoutLabel.title" = "Новая Тренировка";
+"newWorkoutDateAndRepeatLabel.subtitle" = "Дата и повторение";
+"newWorkoutDateLabel.text" = "Дата";
+"newWorkoutRepeatLabel.text" = "Повторять каждые 7 дней";
 
 
 "blaBlaBla.title" = "Раз Два Три Четыре Пять Шесть Семь Восемь Девять Десять";
