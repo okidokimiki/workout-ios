@@ -18,7 +18,52 @@ class NewWorkoutView: UIView {
         return CloseButton(type: .system)
     }()
     
+    private lazy var dateAndRepeatContainerView: ContainerView = {
+        return ContainerView(subtitle: .newWorkoutDateAndRepeatLabelSubtitle, dateAndRepeatContainerStackView)
+    }()
+    
+    private lazy var dateAndRepeatContainerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .equalCentering
+        
+        let dateStackView = UIStackView()
+        dateStackView.axis = .horizontal
+        
+        let dateLabel = ReqularFontLabel(stringText: .newWorkoutDateLabelText)
+        dateStackView.addArrangedSubview(dateLabel)
+        
+        let datePicker = UIDatePicker()
+        if #available(iOS 14.0, *) {
+            datePicker.preferredDatePickerStyle = .compact
+        } else {
+            // Fallback on earlier versions
+        }
+        datePicker.datePickerMode = .date
+        dateStackView.addArrangedSubview(datePicker)
+        
+        let repeatEverySevenDaysStackView = UIStackView()
+        repeatEverySevenDaysStackView.axis = .horizontal
+        repeatEverySevenDaysStackView.distribution = .fillProportionally
+        
+        let repeatLabel = ReqularFontLabel(stringText: .newWorkoutRepeatLabelText)
+        repeatEverySevenDaysStackView.addArrangedSubview(repeatLabel)
+        
+        let switchButton = UISwitch()
+        repeatEverySevenDaysStackView.addArrangedSubview(switchButton)
+        
+        stackView.addArrangedSubview(repeatEverySevenDaysStackView)
+        stackView.addArrangedSubview(dateStackView)
+        
+        return stackView
+    }()
+    
     // MARK: - Initilization
+    
+    override func addSubview(_ view: UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        super.addSubview(view)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,6 +84,7 @@ class NewWorkoutView: UIView {
     private func addSubviews() {
         addSubview(titleLabel)
         addSubview(closeButton)
+        addSubview(dateAndRepeatContainerView)
     }
     
     // MARK: - Creating Subviews
@@ -49,7 +95,6 @@ class NewWorkoutView: UIView {
         label.lineBreakMode = .byTruncatingTail
         label.textColor = UIColor(color: .title1)
         label.text = LocalizableStrings.newWorkoutLabelTitle.localizedString
-        label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }
@@ -62,12 +107,13 @@ class NewWorkoutView: UIView {
         
         closeButton.roundOffWithRadius(Constraints.AutoLayout.closeButtonHeightAnchor / 2)
         activateCloseButtonConstrains()
+        
+        activateDateAndRepeatContainerConstraints()
     }
     
     private func activateTitleLabelConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            titleLabel.heightAnchor.constraint(equalToConstant: Constraints.AutoLayout.titleLabelHeightAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor)
         ])
     }
@@ -81,23 +127,38 @@ class NewWorkoutView: UIView {
             closeButton.widthAnchor.constraint(equalToConstant: Constraints.AutoLayout.closeButtonHeightAnchor)
         ])
     }
+    
+    private func activateDateAndRepeatContainerConstraints() {
+        let dateAndRepeatContainerTopPadding = NewWorkoutView.Constraints.AutoLayout.dateAndRepeatContainerTopPadding
+        let basePadding = NewWorkoutView.Constraints.AutoLayout.basePadding
+        NSLayoutConstraint.activate([
+            dateAndRepeatContainerView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
+                                                            constant: dateAndRepeatContainerTopPadding),
+            dateAndRepeatContainerView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor,
+                                                                constant: basePadding),
+            dateAndRepeatContainerView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor,
+                                                                 constant: -basePadding),
+            dateAndRepeatContainerView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+    }
 }
 
 // MARK: - Constraints
 
 private extension NewWorkoutView {
     enum Constraints {
-        
+
         enum AutoLayout {
             static let basePadding: CGFloat = 22
             
             static let titleLabelBottomPadding: CGFloat = 28
             static let titleLabelTrailingPadding: CGFloat = 57
             static let titleLabelLeadingPadding: CGFloat = 109
-            static let titleLabelHeightAnchor: CGFloat = 24
             
             static let closeButtonLeadingPadding: CGFloat = 57
             static let closeButtonHeightAnchor: CGFloat = 30
+            
+            static let dateAndRepeatContainerTopPadding: CGFloat = 14
         }
     }
 }
