@@ -63,7 +63,7 @@ class ProfileViewController: UIViewController {
         return label
     }()
     
-    var labelStackView = UIStackView()
+    private var labelStackView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

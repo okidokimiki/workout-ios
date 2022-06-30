@@ -15,6 +15,7 @@ enum FontSize: CGFloat {
     case pt16
     case pt13
     case pt12
+    case pt48
     
     var value: CGFloat {
         switch self {
@@ -32,6 +33,8 @@ enum FontSize: CGFloat {
             return 13
         case .pt12:
             return 12
+        case .pt48:
+            return 48
         }
     }
 }

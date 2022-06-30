@@ -18,6 +18,8 @@ enum Fonts {
     case display4
     /// 13pt, Roboto-Medium
     case display5
+    /// 48pt, Roboto-Bold
+    case display6
     /// 16pt, Roboto-Bold
     case buttonBig
     /// 12pt, Roboto-Medium
@@ -37,6 +39,8 @@ enum Fonts {
             return UIFont.makeRobotoFont(name: .medium, size: .pt14)
         case .display5:
             return UIFont.makeRobotoFont(name: .medium, size: .pt13)
+        case .display6:
+            return UIFont.makeRobotoFont(name: .bold, size: .pt48)
         case .buttonBig:
             return UIFont.makeRobotoFont(name: .bold, size: .pt16)
         case .buttonSmall:
